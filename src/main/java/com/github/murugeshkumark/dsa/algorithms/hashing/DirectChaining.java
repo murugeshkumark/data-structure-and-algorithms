@@ -29,7 +29,7 @@ public class DirectChaining {
         int newIndex = simpleASCIIHashFunction(value, hashTable.length); //returns in which index we need to store this string
         if (hashTable[newIndex] == null) {
             System.out.println("Index: " + newIndex + " is empty. Creating a new LinkedList there...");
-            hashTable[newIndex] = new LinkedList<String>();
+            hashTable[newIndex] = new LinkedList<>();
         } else {
             System.out.println("\nIndex: " + newIndex + " is having sufficient space. Inserting there...");
         }
@@ -69,7 +69,6 @@ public class DirectChaining {
     public void displayHashTable() {
         if (hashTable == null) {
             System.out.println("\nHashTable does not exits !");
-            return;
         } else {
             System.out.println("\n---------- HashTable ---------");
             for (int i = 0; i < hashTable.length; i++) {

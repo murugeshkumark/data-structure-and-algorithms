@@ -6,7 +6,7 @@ public class ActivitySelectionMain {
 
     public static void main(String[] args) {
         //Create an ArrayList to store all activities
-        ArrayList<Activity> activityList = new ArrayList<Activity>();
+        ArrayList<Activity> activityList = new ArrayList<>();
 
         //Insert activities in Arraylist
         activityList.add(new Activity("A1", 0, 6));
@@ -18,8 +18,7 @@ public class ActivitySelectionMain {
 
         //Print user entered data
         System.out.println("User provided Schedule:");
-        for (int i = 0; i < activityList.size(); i++) {
-            Activity activity = activityList.get(i);
+        for (Activity activity : activityList) {
             System.out.println(activity.toString());
         }
 

@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class WeightedNode2 implements Comparable<WeightedNode2> {
     public String name;
 
-    private ArrayList<WeightedNode2> neighbors = new ArrayList<WeightedNode2>();
+    private ArrayList<WeightedNode2> neighbors = new ArrayList<>();
     private HashMap<WeightedNode2, Integer> weightMap = new HashMap<>();
     private boolean isVisited = false;
     private WeightedNode2 parent;

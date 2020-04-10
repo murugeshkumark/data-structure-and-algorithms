@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class NumberOfPathsNode {
 
-    int costToReachLastCell = 0;
-    int costOfCurrentCell = 0;
-    NumberOfPathsNode rightCell = null;
-    NumberOfPathsNode downCell = null;
+    int costToReachLastCell;
+    int costOfCurrentCell;
+    NumberOfPathsNode rightCell;
+    NumberOfPathsNode downCell;
     int numberOfWaysToComeHereFromRightOrDown = 0;
-    ArrayList<Integer> NumberOfWaysSatifyingDownCell = new ArrayList<Integer>();
-    ArrayList<Integer> NumberOfWaysSatifyingRightCell = new ArrayList<Integer>();
+    ArrayList<Integer> NumberOfWaysSatifyingDownCell = new ArrayList<>();
+    ArrayList<Integer> NumberOfWaysSatifyingRightCell = new ArrayList<>();
 
 
     //Constructor
@@ -25,13 +25,13 @@ public class NumberOfPathsNode {
     //Getting numbers of ways to reach last cell from current cell
     public int getnumberOfWaysToReachLastCellFromHere() {
         int numberOfWaysToReachLastCellFromHere = 0;
-        for (int i = 0; i < NumberOfWaysSatifyingRightCell.size(); i++) {
-            if (NumberOfWaysSatifyingRightCell.get(i) == costOfCurrentCell) {
+        for (Integer value : NumberOfWaysSatifyingRightCell) {
+            if (value == costOfCurrentCell) {
                 numberOfWaysToReachLastCellFromHere++;
             }
         }
-        for (int i = 0; i < NumberOfWaysSatifyingDownCell.size(); i++) {
-            if (NumberOfWaysSatifyingDownCell.get(i) == costOfCurrentCell) {
+        for (Integer integer : NumberOfWaysSatifyingDownCell) {
+            if (integer == costOfCurrentCell) {
                 numberOfWaysToReachLastCellFromHere++;
             }
         }
@@ -44,12 +44,12 @@ public class NumberOfPathsNode {
 
         numberOfWaysToComeHereFromRightOrDown = NumberOfWaysSatifyingDownCell.size() + NumberOfWaysSatifyingRightCell.size();
         System.out.println("numberOfWaysToComeHereFromRightOrDown: " + numberOfWaysToComeHereFromRightOrDown);
-        for (int i = 0; i < NumberOfWaysSatifyingDownCell.size(); i++) {
-            System.out.println("DownArray: " + NumberOfWaysSatifyingDownCell.get(i) + "  ");
+        for (Integer value : NumberOfWaysSatifyingDownCell) {
+            System.out.println("DownArray: " + value + "  ");
         }
 
-        for (int i = 0; i < NumberOfWaysSatifyingRightCell.size(); i++) {
-            System.out.println("RightArray: " + NumberOfWaysSatifyingRightCell.get(i) + "  ");
+        for (Integer integer : NumberOfWaysSatifyingRightCell) {
+            System.out.println("RightArray: " + integer + "  ");
 
         }
 

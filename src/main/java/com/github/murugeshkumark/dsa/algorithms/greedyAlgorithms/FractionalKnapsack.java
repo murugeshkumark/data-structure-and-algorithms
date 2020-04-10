@@ -1,7 +1,6 @@
 package com.github.murugeshkumark.dsa.algorithms.greedyAlgorithms;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class FractionalKnapsack {
@@ -11,17 +10,11 @@ public class FractionalKnapsack {
         // Sort items by descending ratio of value/ weight
         //Implement Comparator interface and specify which variable('Ratio') of user defined class should the 'compare' method work on.
         //This needs to be done because this will be required in Sort method
-        Comparator<FractionalKnapsackItem> comparator = new Comparator<FractionalKnapsackItem>() {
-            @Override
-            public int compare(FractionalKnapsackItem o1, FractionalKnapsackItem o2) {
-                if (o2.getRatio() > o1.getRatio()) return 1;
-                else return -1;
-            }
-        };
+        Comparator<FractionalKnapsackItem> comparator = Comparator.comparingDouble(FractionalKnapsackItem::getRatio);
 
 
         //Sort all the objects stored in the Arraylist by 'Ratio' variable
-        Collections.sort(items, comparator);
+        items.sort(comparator);
 
 
         //Run greedy algo

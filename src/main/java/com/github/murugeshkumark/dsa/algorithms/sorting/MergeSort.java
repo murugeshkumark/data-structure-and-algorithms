@@ -16,8 +16,8 @@ public class MergeSort {
         int[] leftTmpArray = new int[middle - left + 2];  //Create tmp arrays
         int[] rightTmpArray = new int[right - middle + 1];
 
-        for (int i = 0; i <= middle - left; i++) //Copy values from Array 'A' to these tmp arrays
-            leftTmpArray[i] = A[left + i];
+        //Copy values from Array 'A' to these tmp arrays
+        if (middle - left + 1 >= 0) System.arraycopy(A, left, leftTmpArray, 0, middle - left + 1);
         for (int i = 0; i < right - middle; i++)
             rightTmpArray[i] = A[middle + 1 + i];
 
@@ -37,8 +37,8 @@ public class MergeSort {
 
 
     public static void printArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + "  ");
+        for (int value : array) {
+            System.out.print(value + "  ");
         }
     }//end of method
 

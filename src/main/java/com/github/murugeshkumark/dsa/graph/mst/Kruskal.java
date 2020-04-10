@@ -4,11 +4,10 @@ import com.github.murugeshkumark.dsa.graph.graphUtil.UndirectedEdge;
 import com.github.murugeshkumark.dsa.node.WeightedNode;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Kruskal {
-    ArrayList<WeightedNode> nodeList = new ArrayList<WeightedNode>();
+    ArrayList<WeightedNode> nodeList;
     ArrayList<UndirectedEdge> edgeList = new ArrayList<>();
 
     public Kruskal(ArrayList<WeightedNode> nodeList) {
@@ -22,13 +21,8 @@ public class Kruskal {
         DisjointSet.makeSet(nodeList);
 
         // sort the edges in ascending order
-        Comparator<UndirectedEdge> comparator = new Comparator<UndirectedEdge>() {
-            @Override
-            public int compare(UndirectedEdge o1, UndirectedEdge o2) {
-                return o1.getWeight() - o2.getWeight();
-            }
-        };
-        Collections.sort(edgeList, comparator);
+        Comparator<UndirectedEdge> comparator = Comparator.comparingInt(UndirectedEdge::getWeight);
+        edgeList.sort(comparator);
 
         int cost = 0;
         for (UndirectedEdge edge : edgeList) {

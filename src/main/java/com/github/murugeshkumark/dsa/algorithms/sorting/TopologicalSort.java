@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class TopologicalSort {
-    ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
+    ArrayList<GraphNode> nodeList;
 
 
     //Constructor

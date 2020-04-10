@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class BFSByLinkedList {
 
-    ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
+    ArrayList<GraphNode> nodeList;
 
 
     //Constructor

@@ -16,7 +16,8 @@ public class CoinChangeProblem {
                 N = N - maxAmount;
             }
             if (N == 0) break;
-        }//end of while loop
+        }
+        //end of while loop
     }//end of method
 
 }//end of class

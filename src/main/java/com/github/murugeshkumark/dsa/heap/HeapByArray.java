@@ -102,7 +102,7 @@ public class HeapByArray {
     public void HeapifyTopToBottom(int index) {
         int left = index * 2;
         int right = (index * 2) + 1;
-        int smallestChild = 0;
+        int smallestChild;
 
         if (sizeOfTree < left) { //If there is no child of this com.github.murugeshkumark.dsa.node, then nothing to do. Just return.
             return;

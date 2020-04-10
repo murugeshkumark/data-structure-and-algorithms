@@ -66,8 +66,7 @@ public class BinarySearchTreeByLinkedList {
         } else { // If currentNode is the com.github.murugeshkumark.dsa.node to be deleted
 
             if (root.getLeft() != null && root.getRight() != null) { // if nodeToBeDeleted have both children
-                BinaryNode temp = root;
-                BinaryNode minNodeForRight = minimumElement(temp.getRight());// Finding minimum element from right subtree
+                BinaryNode minNodeForRight = minimumElement(root.getRight());// Finding minimum element from right subtree
                 root.setValue(minNodeForRight.getValue()); // Replacing current com.github.murugeshkumark.dsa.node with minimum com.github.murugeshkumark.dsa.node from right subtree
                 root.setRight(deleteNodeOfBST(root.getRight(), minNodeForRight.getValue()));  // Deleting minimum com.github.murugeshkumark.dsa.node from right now
             } else if (root.getLeft() != null) {// if nodeToBeDeleted has only left child
@@ -114,7 +113,7 @@ public class BinarySearchTreeByLinkedList {
 
     // Level order traversal of BST
     void levelOrderTraversal() {
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         System.out.println("\nPrinting Level order traversal of Tree...");
         if (root == null) {
@@ -140,8 +139,8 @@ public class BinarySearchTreeByLinkedList {
 
 
     void printTreeGraphically() {
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
-        Queue<Integer> level = new LinkedList<Integer>();
+        Queue<BinaryNode> queue = new LinkedList<>();
+        Queue<Integer> level = new LinkedList<>();
 
         int CurrentLevel = 1;
         boolean previousLevelWasAllNull = false;
@@ -162,6 +161,7 @@ public class BinarySearchTreeByLinkedList {
                 } else {
                     queue.add(queue.peek().getLeft());
                     level.add(CurrentLevel + 1);
+                    assert queue.peek() != null;
                     queue.add(queue.peek().getRight());
                     level.add(CurrentLevel + 1);
                     previousLevelWasAllNull = false;
@@ -171,7 +171,7 @@ public class BinarySearchTreeByLinkedList {
             } else { //level has changed
                 System.out.println("\n");
                 CurrentLevel++;
-                if (previousLevelWasAllNull == true) {
+                if (previousLevelWasAllNull) {
                     break;
                 }
                 previousLevelWasAllNull = true;

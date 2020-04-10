@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class FloydWarshall {
 
-    ArrayList<WeightedNode> nodeList = new ArrayList<WeightedNode>();
+    ArrayList<WeightedNode> nodeList;
 
 
     //Constructor
@@ -24,13 +24,11 @@ public class FloydWarshall {
             WeightedNode first = nodeList.get(i);
             for (int j = 0; j < size; j++) {
                 WeightedNode second = nodeList.get(j);
+                //we have direct edge between i & j
+                //no direct edge between i & j, so mark it as infinity [divided by 10 to avoid arithmetic overflow]
                 if (i == j)
                     V[i][j] = 0;
-                else if (first.getWeightMap().containsKey(second)) { //we have direct edge between i & j
-                    V[i][j] = first.getWeightMap().get(second);
-                } else { //no direct edge between i & j, so mark it as infinity [divided by 10 to avoid arithmetic overflow]
-                    V[i][j] = Integer.MAX_VALUE / 10;
-                }
+                else V[i][j] = first.getWeightMap().getOrDefault(second, Integer.MAX_VALUE / 10);
             }
         }//end of loop
 

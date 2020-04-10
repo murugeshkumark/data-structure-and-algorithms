@@ -139,12 +139,10 @@ public class DoubleLinkedList {
     public void deletionOfNode(int location) {
         if (!existsLinkedList()) {
             System.out.println("The linked list does not exist!!");// Linked List does not exists
-            return;
         } else if (location == 0) { // we want to delete first element
             if (getSize() == 1) { // if this is the only com.github.murugeshkumark.dsa.node in this list
                 head = tail = null;
                 setSize(getSize() - 1);
-                return;
             } else {
                 head = head.getNext();
                 head.setPrev(null);

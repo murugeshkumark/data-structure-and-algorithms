@@ -27,7 +27,7 @@ public class NumberOfPathsToReachLastCell_BU {
                 dp[row][col] = tmp;
                 System.out.println("\n\n");
                 try {
-                    Thread.sleep(1 * 1000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -152,7 +152,6 @@ public class DoubleCircularLinkedList {
         System.out.println("\n\nDeleting Linked List...");
         if (tail == null) {
             System.out.println("Linked List is already deleted, nothing to delete anymore !");
-            return;
         } else {
             head.setPrev(null);
             tail.setNext(null);
@@ -185,14 +184,12 @@ public class DoubleCircularLinkedList {
     public void deletionOfNode(int location) {
         if (!existsLinkedList()) {
             System.out.println("The linked list does not exist!!");// Linked List does not exists
-            return;
         } else if (location == 0) { // we want to delete first element
             if (getSize() == 1) { // if this is the only com.github.murugeshkumark.dsa.node in this list
                 head.setNext(null);
                 head.setPrev(null);
                 head = tail = null;
                 setSize(getSize() - 1);
-                return;
             } else {
                 head = head.getNext();
                 head.setPrev(null);

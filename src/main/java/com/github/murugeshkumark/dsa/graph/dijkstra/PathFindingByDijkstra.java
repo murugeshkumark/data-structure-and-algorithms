@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 
 public class PathFindingByDijkstra {
-    ArrayList<WeightedNode> nodeList = new ArrayList<WeightedNode>();
+    ArrayList<WeightedNode> nodeList;
 
 
     //Constructor
@@ -17,9 +17,8 @@ public class PathFindingByDijkstra {
 
     //Dijkstra from a Source Node
     void dijkstra(WeightedNode node) {
-        PriorityQueue<WeightedNode> queue = new PriorityQueue<>();
         node.setDistance(0); //This will make sure that we start from this vertex in priority com.github.murugeshkumark.dsa.queue as distance is min
-        queue.addAll(nodeList);
+        PriorityQueue<WeightedNode> queue = new PriorityQueue<>(nodeList);
         while (!queue.isEmpty()) {
             WeightedNode presentNode = queue.remove(); //remove com.github.murugeshkumark.dsa.node with minimum distance from com.github.murugeshkumark.dsa.queue
             for (WeightedNode neighbor : presentNode.getNeighbors()) { //for each neighbor

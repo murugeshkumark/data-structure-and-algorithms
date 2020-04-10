@@ -92,7 +92,6 @@ public class BinaryTreeByArray {
         int location = search(value);
         //If Value does not exists in Array
         if (location == -1) {
-            return;
         } else {
             //insert last element of the Tree into current location
             arr[location] = arr[lastUsedIndex];

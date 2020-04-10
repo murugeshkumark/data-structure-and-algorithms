@@ -63,7 +63,7 @@ public class QuadraticProbing {
     // Creates a new HashTable and does ReHashing
     public void rehashKeys(String newStringToBeInserted) {
         noOfCellsUsedInHashTable = 0; // need to reset it as we are now dealing with fresh HashTable
-        ArrayList<String> data = new ArrayList<String>();
+        ArrayList<String> data = new ArrayList<>();
         for (String s : hashTable) { // loop through the HashTable and save all the keys in ArrayList
             if (s != null)
                 data.add(s);

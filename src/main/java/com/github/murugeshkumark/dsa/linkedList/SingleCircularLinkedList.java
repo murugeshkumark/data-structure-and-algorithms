@@ -121,7 +121,6 @@ public class SingleCircularLinkedList {
         head = null;
         if (tail == null) {
             System.out.println("Linked List is already deleted, nothing to delete !");
-            return;
         } else {
             tail.setNext(null);
             tail = null;
@@ -152,7 +151,6 @@ public class SingleCircularLinkedList {
     public void deletionOfNode(int location) {
         if (!existsLinkedList()) {
             System.out.println("The linked list does not exist!!");// Linked List does not exists
-            return;
         } else if (location == 0) { // we want to delete first element
             head = head.getNext();
             tail.setNext(head);

@@ -22,6 +22,7 @@ public class DisjointSet {
             if (!findSet(firstNode).equals(findSet(secondNode))) {
                 System.out.println("\nMaking union " + firstNode + " and " + secondNode);
                 DisjointSet unionedSet = union(firstNode, secondNode);
+                assert unionedSet != null;
                 unionedSet.printAllNodesOfThisSet();
             }
             System.out.println("\n**************************************\n");

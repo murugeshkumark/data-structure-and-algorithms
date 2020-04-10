@@ -1,7 +1,7 @@
 package com.github.murugeshkumark.dsa.array;
 
 public class TwoDimensionalArray {
-    int[][] arr = null;
+    int[][] arr;
 
     // Constructor
     public TwoDimensionalArray(int numberOfRows, int numberOfColumns) {
@@ -18,9 +18,9 @@ public class TwoDimensionalArray {
     public void traverseArray() {
         try {
             System.out.println("Printing the com.github.murugeshkumark.dsa.array now...");
-            for (int row = 0; row < arr.length; row++) {
+            for (int[] ints : arr) {
                 for (int col = 0; col < arr[0].length; col++) {
-                    System.out.print(arr[row][col] + "   ");
+                    System.out.print(ints[col] + "   ");
                 }
                 System.out.println();
             }

@@ -131,7 +131,7 @@ public class AVLTree {
 
     // Level order traversal of BST
     void levelOrderTraversal() {
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         System.out.println("Printing Level order traversal of AVL Tree...");
         if (root == null) {
@@ -168,8 +168,7 @@ public class AVLTree {
         } else { // If currentNode is the com.github.murugeshkumark.dsa.node to be deleted
             //System.out.println("currentNode is the com.github.murugeshkumark.dsa.node to be deleted");
             if (currentNode.getLeft() != null && currentNode.getRight() != null) { // if nodeToBeDeleted have both children
-                BinaryNode temp = currentNode;
-                BinaryNode minNodeForRight = minimumElement(temp.getRight());// Finding minimum element from right subtree
+                BinaryNode minNodeForRight = minimumElement(currentNode.getRight());// Finding minimum element from right subtree
                 currentNode.setValue(minNodeForRight.getValue()); // Replacing current com.github.murugeshkumark.dsa.node with minimum com.github.murugeshkumark.dsa.node from right subtree
                 deleteNodeOfBST(currentNode.getRight(), minNodeForRight.getValue());// Deleting minimum com.github.murugeshkumark.dsa.node from right now
             } else if (currentNode.getLeft() != null) {// if nodeToBeDeleted has only left child
@@ -224,8 +223,8 @@ public class AVLTree {
 
 
     void printTreeGraphically() {
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
-        Queue<Integer> level = new LinkedList<Integer>();
+        Queue<BinaryNode> queue = new LinkedList<>();
+        Queue<Integer> level = new LinkedList<>();
 
         int CurrentLevel = 1;
         boolean previousLevelWasAllNull = false;
@@ -246,6 +245,7 @@ public class AVLTree {
                 } else {
                     queue.add(queue.peek().getLeft());
                     level.add(CurrentLevel + 1);
+                    assert queue.peek() != null;
                     queue.add(queue.peek().getRight());
                     level.add(CurrentLevel + 1);
                     previousLevelWasAllNull = false;
@@ -255,7 +255,7 @@ public class AVLTree {
             } else { //level has changed
                 System.out.println("\n");
                 CurrentLevel++;
-                if (previousLevelWasAllNull == true) {
+                if (previousLevelWasAllNull) {
                     break;
                 }
                 previousLevelWasAllNull = true;

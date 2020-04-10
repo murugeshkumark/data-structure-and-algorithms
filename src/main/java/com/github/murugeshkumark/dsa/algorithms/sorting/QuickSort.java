@@ -11,10 +11,9 @@ public class QuickSort {
 
 
     static int partition(int[] array, int p, int q) {
-        int pivot = q;
         int i = p - 1;
         for (int j = p; j <= q; j++) {
-            if (array[j] <= array[pivot]) {
+            if (array[j] <= array[q]) {
                 i++;
                 int temp = array[i];
                 array[i] = array[j];
@@ -27,8 +26,8 @@ public class QuickSort {
 
 
     public static void printArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + "  ");
+        for (int value : array) {
+            System.out.print(value + "  ");
         }
     }//end of method
 

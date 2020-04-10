@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class PathFindingByBFS {
-    ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
+    ArrayList<GraphNode> nodeList;
 
 
     //Constructor

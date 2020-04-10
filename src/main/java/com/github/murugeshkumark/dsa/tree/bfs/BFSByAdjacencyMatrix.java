@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class BFSByAdjacencyMatrix {
-    ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();
+    ArrayList<GraphNode> nodeList;
     int[][] adjacencyMatrix;
 
 
@@ -48,7 +48,7 @@ public class BFSByAdjacencyMatrix {
 
     // get all neighbors of a particular com.github.murugeshkumark.dsa.node by checking adjacency matrix and add it to neighbours arraylist
     public ArrayList<GraphNode> getNeighbors(GraphNode node) {
-        ArrayList<GraphNode> neighbors = new ArrayList<GraphNode>();
+        ArrayList<GraphNode> neighbors = new ArrayList<>();
 
         //gets row# to search in com.github.murugeshkumark.dsa.node index
         int nodeIndex = node.getIndex();

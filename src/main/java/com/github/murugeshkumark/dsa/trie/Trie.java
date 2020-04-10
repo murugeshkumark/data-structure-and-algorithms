@@ -6,7 +6,7 @@ import java.util.Map;
 public class Trie {
 
     // Private class
-    private class TrieNode {
+    private static class TrieNode {
         Map<Character, TrieNode> children;
         boolean endOfWord;
 
@@ -55,7 +55,7 @@ public class Trie {
             }
             currentNode = node;
         }
-        if (currentNode.endOfWord == true) {
+        if (currentNode.endOfWord) {
             System.out.println("Word: " + word + " exists in Trie !"); //CASE#2 -- Word exists in Trie
         } else {//CASE#3 -- Current word is a prefix of another word. But this word does not exists
             System.out.println("Word: " + word + " does not exists in Trie ! But this is a Prefix of another Word !");
@@ -66,7 +66,7 @@ public class Trie {
 
     // Delete word from Trie
     public void delete(String word) {
-        if (search(word) == true) {
+        if (search(word)) {
             delete(root, word, 0);
         }
     }
@@ -107,7 +107,7 @@ public class Trie {
         }
 
 
-        if (currentNode.endOfWord == true) { // CASE#3
+        if (currentNode.endOfWord) { // CASE#3
             System.out.println("Entering Case#3");
             delete(currentNode, word, index + 1);
             return false;
@@ -116,7 +116,7 @@ public class Trie {
 
         System.out.println("Entering Case#1");
         canThisNodeBeDeleted = delete(currentNode, word, index + 1); // CASE#4
-        if (canThisNodeBeDeleted == true) {
+        if (canThisNodeBeDeleted) {
             System.out.println("Character " + ch + " has no dependency, hence deleting it");
             parentNode.children.remove(ch);
             return true; // Current com.github.murugeshkumark.dsa.node can also be deleted

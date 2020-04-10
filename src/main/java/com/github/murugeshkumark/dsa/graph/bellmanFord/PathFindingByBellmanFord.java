@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class PathFindingByBellmanFord {
 
     //Will store all the vertices
-    ArrayList<WeightedNode> nodeList = new ArrayList<WeightedNode>();
+    ArrayList<WeightedNode> nodeList;
 
     //Constructor
     public PathFindingByBellmanFord(ArrayList<WeightedNode> nodeList) {

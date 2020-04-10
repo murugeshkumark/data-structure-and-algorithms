@@ -1,7 +1,6 @@
 package com.github.murugeshkumark.dsa.algorithms.greedyAlgorithms;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class ActivitiySelection {
@@ -10,15 +9,10 @@ public class ActivitiySelection {
 
         //Implement Comparator interface and specify which variable('FinishTime') of user defined class should the 'compare' method work on.
         //This needs to be done because this will be required in Sort method
-        Comparator<Activity> finishTimeComparator = new Comparator<Activity>() {
-            @Override
-            public int compare(Activity o1, Activity o2) {
-                return o1.getFinishTime() - o2.getFinishTime();
-            }
-        };
+        Comparator<Activity> finishTimeComparator = Comparator.comparingInt(Activity::getFinishTime);
 
         //Sort all the objects stored in the Arraylist by 'FinishTime' variable
-        Collections.sort(activityList, finishTimeComparator);
+        activityList.sort(finishTimeComparator);
         Activity previousActivity = activityList.get(0);
 
 

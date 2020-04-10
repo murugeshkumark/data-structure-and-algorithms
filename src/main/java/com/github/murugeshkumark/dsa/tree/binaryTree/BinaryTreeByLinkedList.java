@@ -24,7 +24,7 @@ public class BinaryTreeByLinkedList {
             System.out.println("Successfully inserted new com.github.murugeshkumark.dsa.node at Root !");
             return;
         }
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
             BinaryNode presentNode = queue.remove();
@@ -46,7 +46,7 @@ public class BinaryTreeByLinkedList {
 
     // Search for a given value in binary tree
     void search(int value) {
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
             BinaryNode presentNode = queue.remove();
@@ -66,7 +66,7 @@ public class BinaryTreeByLinkedList {
 
     // delete com.github.murugeshkumark.dsa.node from binary tree
     void deleteNodeOfBinaryTree(int value) {
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
             BinaryNode presentNode = queue.remove();
@@ -89,13 +89,14 @@ public class BinaryTreeByLinkedList {
 
     //Delete deepest com.github.murugeshkumark.dsa.node
     public void DeleteDeepestNode() {
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         BinaryNode previousNode, presentNode = null;
         while (!queue.isEmpty()) {
             previousNode = presentNode;
             presentNode = queue.remove();
             if (presentNode.getLeft() == null) {
+                assert previousNode != null;
                 previousNode.setRight(null);
                 return;
             } else if ((presentNode.getRight() == null)) {
@@ -111,7 +112,7 @@ public class BinaryTreeByLinkedList {
     // get last com.github.murugeshkumark.dsa.node of last level of binary tree
     public BinaryNode getDeepestNode() {
         // make an empty com.github.murugeshkumark.dsa.queue. Queue is Interface and LinkedList is class
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         BinaryNode presentNode = null;
         while (!queue.isEmpty()) {
@@ -159,7 +160,7 @@ public class BinaryTreeByLinkedList {
     // level order traversal of binary tree
     void levelOrder() {
         // make a com.github.murugeshkumark.dsa.queue for level order. Queue is Interface and LinkedList is class
-        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
             BinaryNode presentNode = queue.remove();

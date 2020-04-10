@@ -126,7 +126,6 @@ public class SingleLinkedList {
     public void deletionOfNode(int location) {
         if (!existsLinkedList()) {
             System.out.println("The linked list does not exist!!");// Linked List does not exists
-            return;
         } else if (location == 0) { // we want to delete first element
             head = head.getNext();
             setSize(getSize() - 1);

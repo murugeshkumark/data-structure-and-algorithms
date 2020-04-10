@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 
 public class Prims {
 
-    ArrayList<WeightedNode> nodeList = new ArrayList<WeightedNode>();
+    ArrayList<WeightedNode> nodeList;
 
     //Constructor
     public Prims(ArrayList<WeightedNode> nodeList) {
@@ -17,8 +17,8 @@ public class Prims {
 
     // Prim's algorithm from source com.github.murugeshkumark.dsa.node
     void prims(WeightedNode node) {
-        for (int counter = 0; counter < nodeList.size(); counter++) {
-            nodeList.get(counter).setDistance(Integer.MAX_VALUE);
+        for (WeightedNode weightedNode : nodeList) {
+            weightedNode.setDistance(Integer.MAX_VALUE);
         }
         node.setDistance(0); // Setting '0' distance for Source Vertex
 
@@ -31,9 +31,7 @@ public class Prims {
         }
 
 
-        PriorityQueue<WeightedNode> queue = new PriorityQueue<>();
-
-        queue.addAll(nodeList);
+        PriorityQueue<WeightedNode> queue = new PriorityQueue<>(nodeList);
         while (!queue.isEmpty()) {
             WeightedNode presentNode = queue.remove(); // Remove vertex which has min distance
 

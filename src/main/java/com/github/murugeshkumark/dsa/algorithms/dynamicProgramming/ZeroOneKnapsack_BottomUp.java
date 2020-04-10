@@ -19,7 +19,7 @@ public class ZeroOneKnapsack_BottomUp {
 
         for (int row = numberOfRows - 2; row >= 0; row--) {
             for (int column = 1; column <= capacity; column++) {
-                int profit1 = 0, profit2 = 0;
+                int profit1 = 0, profit2;
                 if (weights[row] <= column) { // column represents current capacity
                     profit1 = profits[row] + dp[row + 1][column - weights[row]];  // Taking current element
                 }

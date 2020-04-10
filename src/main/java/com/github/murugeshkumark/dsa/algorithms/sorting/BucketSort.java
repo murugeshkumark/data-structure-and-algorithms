@@ -16,8 +16,8 @@ public class BucketSort {
     //Prints Array
     public void printArray() {
         int tmp = 0;
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int value : arr) {
+            System.out.print(value + " ");
             tmp++;
             if (tmp == 20) {
                 System.out.println();
@@ -63,7 +63,7 @@ public class BucketSort {
 
         //initializing empty buckets
         for (int i = 0; i < buckets.length; i++) {
-            buckets[i] = new ArrayList<Integer>();
+            buckets[i] = new ArrayList<>();
         }
 
 
