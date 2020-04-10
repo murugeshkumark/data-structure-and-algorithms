@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.sorting;
+package com.github.murugeshkumark.dsa.algorithms.sorting;
 import com.github.murugeshkumark.dsa.heap.HeapByArray;
 
 public class HeapSort {
@@ -11,7 +11,7 @@ public class HeapSort {
 	
 
 	public void sort() {
-		HeapByArray hba = new HeapByArray(arr.length); //We will reuse HeapByArray class to do com.github.murugeshkumark.dsa.sorting
+		HeapByArray hba = new HeapByArray(arr.length); //We will reuse HeapByArray class to do com.github.murugeshkumark.dsa.algorithms.sorting
 		for(int i=0; i<arr.length;i++) { //Insert in Heap
 			hba.insertInHeap(arr[i]);
 		}

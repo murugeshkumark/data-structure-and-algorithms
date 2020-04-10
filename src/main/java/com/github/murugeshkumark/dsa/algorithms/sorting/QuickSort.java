@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.sorting;
+package com.github.murugeshkumark.dsa.algorithms.sorting;
 
 public class QuickSort {
 	public static void quickSort(int[] array, int start, int end) {

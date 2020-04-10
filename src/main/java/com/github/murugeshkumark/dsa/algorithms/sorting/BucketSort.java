@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.sorting;
+package com.github.murugeshkumark.dsa.algorithms.sorting;
 import java.util.ArrayList;
 import java.util.Collections;
 

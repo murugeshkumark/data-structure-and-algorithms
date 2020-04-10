@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.sorting;
+package com.github.murugeshkumark.dsa.algorithms.sorting;
 
 public class SelectionSortMain {
 
@@ -10,7 +10,7 @@ public class SelectionSortMain {
 		
 		SelectionSort.selectionSort(array);
 		
-		System.out.println("\n\nAfter com.github.murugeshkumark.dsa.sorting: ");
+		System.out.println("\n\nAfter com.github.murugeshkumark.dsa.algorithms.sorting: ");
 		SelectionSort.printArray(array);
 	}//end of method
 

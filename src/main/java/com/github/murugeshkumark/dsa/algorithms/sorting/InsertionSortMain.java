@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.sorting;
+package com.github.murugeshkumark.dsa.algorithms.sorting;
 
 public class InsertionSortMain {
 	public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class InsertionSortMain {
 		long end = System.nanoTime();
 		System.out.println("\n\nTime to execute this algo: " + (end-start));
 		
-		System.out.println("\nAfter com.github.murugeshkumark.dsa.sorting: ");
+		System.out.println("\nAfter com.github.murugeshkumark.dsa.algorithms.sorting: ");
 		InsertionSort.printArray(array);
 	}//end of method
 	

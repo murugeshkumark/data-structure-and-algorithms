@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.sorting;
+package com.github.murugeshkumark.dsa.algorithms.sorting;
 
 public class QuickSortMain {
 
@@ -10,7 +10,7 @@ public class QuickSortMain {
 		
 		QuickSort.quickSort(array, 0, array.length-1);
 		
-		System.out.println("\n\nAfter com.github.murugeshkumark.dsa.sorting: ");
+		System.out.println("\n\nAfter com.github.murugeshkumark.dsa.algorithms.sorting: ");
 		QuickSort.printArray(array);
 	}//end of method
 

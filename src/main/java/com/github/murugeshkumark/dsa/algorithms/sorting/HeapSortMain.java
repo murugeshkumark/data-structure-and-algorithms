@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.sorting;
+package com.github.murugeshkumark.dsa.algorithms.sorting;
 
 public class HeapSortMain {
 
@@ -13,7 +13,7 @@ public class HeapSortMain {
 		
 		hs.sort();
 		
-		System.out.println("\n\nAfter com.github.murugeshkumark.dsa.sorting: ");
+		System.out.println("\n\nAfter com.github.murugeshkumark.dsa.algorithms.sorting: ");
 		hs.printArray();
 	}//end of method
 
