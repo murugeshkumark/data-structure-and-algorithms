@@ -36,10 +36,7 @@ public class StackByLinkedList {
 
 
     public boolean isEmpty() {
-        if (list.getHead() == null)
-            return true;
-        else
-            return false;
+        return list.getHead() == null;
     }// end of method
 
 

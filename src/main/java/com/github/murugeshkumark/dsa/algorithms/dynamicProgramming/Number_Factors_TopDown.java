@@ -3,7 +3,7 @@ package com.github.murugeshkumark.dsa.algorithms.dynamicProgramming;
 public class Number_Factors_TopDown {
 
     public int waysToGetN(int n) {
-        int dp[] = new int[n + 1];
+        int[] dp = new int[n + 1];
         return waysToGetN_TopDown(dp, n);
     }//End of method
 

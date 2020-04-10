@@ -4,7 +4,7 @@ import com.github.murugeshkumark.dsa.node.NumberOfPathsNode;
 
 public class NumberOfPathsToReachLastCell_BU {
 
-    public void numberOfPaths(int array[][], int numberOfRow, int numberOfCol, int costToReachLastCell) {
+    public void numberOfPaths(int[][] array, int numberOfRow, int numberOfCol, int costToReachLastCell) {
         NumberOfPathsNode[][] dp = new NumberOfPathsNode[numberOfRow][numberOfCol];
 
         //insert 'null' value for last row and col

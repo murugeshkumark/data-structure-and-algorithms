@@ -1,7 +1,7 @@
 package com.github.murugeshkumark.dsa.array;
 
 public class TwoDimensionalArray {
-    int arr[][] = null;
+    int[][] arr = null;
 
     // Constructor
     public TwoDimensionalArray(int numberOfRows, int numberOfColumns) {

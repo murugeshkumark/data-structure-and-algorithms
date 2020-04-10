@@ -1,7 +1,7 @@
 package com.github.murugeshkumark.dsa.array;
 
 public class SingleDimensionArray {
-    int arr[] = null;
+    int[] arr = null;
 
 
     //Constructor

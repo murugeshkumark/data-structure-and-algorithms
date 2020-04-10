@@ -3,7 +3,7 @@ package com.github.murugeshkumark.dsa.algorithms.dynamicProgramming;
 public class House_Thieft_TopDown {
 
     public int maxMoney(int[] HouseNetWorth) {
-        int dp[] = new int[HouseNetWorth.length];
+        int[] dp = new int[HouseNetWorth.length];
         return maxMoney_TopDown(dp, HouseNetWorth, 0);
     }
 

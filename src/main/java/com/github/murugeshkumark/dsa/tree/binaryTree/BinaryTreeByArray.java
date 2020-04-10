@@ -15,11 +15,7 @@ public class BinaryTreeByArray {
 
     //Check if com.github.murugeshkumark.dsa.array is full
     boolean isTreeFull() {
-        if (arr.length - 1 == lastUsedIndex) {
-            return true;
-        } else {
-            return false;
-        }
+        return arr.length - 1 == lastUsedIndex;
     }
 
 

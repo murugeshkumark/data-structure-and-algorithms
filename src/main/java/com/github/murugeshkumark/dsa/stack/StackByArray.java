@@ -38,10 +38,7 @@ public class StackByArray {
 
     public boolean isEmptyStack() {
         //if top pointer is zero, the com.github.murugeshkumark.dsa.stack is empty
-        if (topOfStack == -1)
-            return true;
-        else
-            return false;
+        return topOfStack == -1;
     }//end of method
 
 

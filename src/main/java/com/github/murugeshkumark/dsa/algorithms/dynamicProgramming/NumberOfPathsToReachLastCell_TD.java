@@ -2,13 +2,13 @@ package com.github.murugeshkumark.dsa.algorithms.dynamicProgramming;
 
 public class NumberOfPathsToReachLastCell_TD {
 
-    public int numberOfPaths(int array[][], int row, int col, int cost) {
+    public int numberOfPaths(int[][] array, int row, int col, int cost) {
         int[][] dp = new int[row + 1][col + 1];
         return numberOfPathsAux(dp, array, row, col, cost);
     }// End of method
 
 
-    public int numberOfPathsAux(int dp[][], int array[][], int row, int col, int cost) {
+    public int numberOfPathsAux(int[][] dp, int[][] array, int row, int col, int cost) {
         if (cost < 0) {// BASE CASE
             return 0;
         }

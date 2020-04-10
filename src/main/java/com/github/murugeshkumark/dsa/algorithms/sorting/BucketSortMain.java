@@ -5,7 +5,7 @@ import java.util.Random;
 public class BucketSortMain {
     public static void main(String[] args) {
 
-        int arr[] = new int[100];
+        int[] arr = new int[100];
 
         //Generating 100 random numbers in the range of 0-100
         Random random = new Random();

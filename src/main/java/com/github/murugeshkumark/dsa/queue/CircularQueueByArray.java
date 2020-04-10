@@ -67,21 +67,15 @@ public class CircularQueueByArray {
 
 
     public boolean isQueueEmpty() {
-        if (topOfQueue == -1)
-            return true;
-        else
-            return false;
+        return topOfQueue == -1;
     }//end of method
 
 
     public boolean isQueueFull() {
+        //Trivial case of Queue being full
         if (topOfQueue + 1 == start) { //If we have completed a circle, then we can say that Queue is full
             return true;
-        } else if ((start == 0) && (topOfQueue + 1 == size)) { //Trivial case of Queue being full
-            return true;
-        } else {
-            return false;
-        }
+        } else return (start == 0) && (topOfQueue + 1 == size);
     }//end of method
 
 

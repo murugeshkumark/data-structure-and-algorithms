@@ -2,7 +2,7 @@ package com.github.murugeshkumark.dsa.algorithms.divideAndConquer;
 
 public class NumberOfPathsToReachLastCell_DC {
 
-    public int numberOfPaths(int array[][], int row, int col, int cost) {
+    public int numberOfPaths(int[][] array, int row, int col, int cost) {
         if (cost < 0) {//BASE CASE
             return 0;
         }

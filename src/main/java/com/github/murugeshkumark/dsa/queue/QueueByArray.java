@@ -61,19 +61,12 @@ public class QueueByArray {
 
 
     public boolean isQueueEmpty() {
-        if ((beginningOfQueue == -1) || (beginningOfQueue == arr.length))
-            return true;
-        else
-            return false;
+        return (beginningOfQueue == -1) || (beginningOfQueue == arr.length);
     }//end of method
 
 
     public boolean isQueueFull() {
-        if (topOfQueue == arr.length - 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return topOfQueue == arr.length - 1;
 
     }//end of method
 

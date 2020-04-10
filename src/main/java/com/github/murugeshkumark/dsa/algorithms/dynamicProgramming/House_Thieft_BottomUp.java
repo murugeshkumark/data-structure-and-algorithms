@@ -3,7 +3,7 @@ package com.github.murugeshkumark.dsa.algorithms.dynamicProgramming;
 public class House_Thieft_BottomUp {
 
     public int findMaxSteal(int[] wealth) {
-        int dp[] = new int[wealth.length + 2]; // '+1' to handle the zero house
+        int[] dp = new int[wealth.length + 2]; // '+1' to handle the zero house
         dp[wealth.length] = 0; // if there are no houses, the thief can't steal anything
         for (int i = wealth.length - 1; i >= 0; i--) {
             dp[i] = Math.max(wealth[i] + dp[i + 2], dp[i + 1]);

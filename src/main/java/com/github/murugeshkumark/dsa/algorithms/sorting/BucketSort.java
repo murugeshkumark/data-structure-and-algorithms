@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class BucketSort {
-    int arr[];
+    int[] arr;
 
 
     //Constructor
-    public BucketSort(int arr[]) {
+    public BucketSort(int[] arr) {
         this.arr = arr;
     }
 
