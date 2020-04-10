@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.node;
+package com.github.murugeshkumark.common.node;
 
 import java.util.ArrayList;
 

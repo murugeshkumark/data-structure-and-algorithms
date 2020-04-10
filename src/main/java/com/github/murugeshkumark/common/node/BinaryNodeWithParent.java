@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.node;
+package com.github.murugeshkumark.common.node;
 
 public class BinaryNodeWithParent {
     private int value;

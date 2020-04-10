@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.ds.graph.mst;
 
-import com.github.murugeshkumark.node.WeightedNode;
+import com.github.murugeshkumark.common.node.WeightedNode;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;

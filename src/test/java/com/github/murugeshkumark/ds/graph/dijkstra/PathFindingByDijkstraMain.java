@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.ds.graph.dijkstra;
 
-import com.github.murugeshkumark.node.WeightedNode;
+import com.github.murugeshkumark.common.node.WeightedNode;
 
 import java.util.ArrayList;
 
