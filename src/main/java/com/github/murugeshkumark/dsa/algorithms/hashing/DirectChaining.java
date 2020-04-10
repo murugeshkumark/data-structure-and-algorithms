@@ -30,15 +30,12 @@ public class DirectChaining {
         if (hashTable[newIndex] == null) {
             System.out.println("Index: " + newIndex + " is empty. Creating a new LinkedList there...");
             hashTable[newIndex] = new LinkedList<String>();
-            hashTable[newIndex].add(value);
-            System.out.println("Successfully inserted " + "\"" + value + "\"" + " in location: " + newIndex);
-            System.out.println("-------------------------------------------\n");
         } else {
             System.out.println("\nIndex: " + newIndex + " is having sufficient space. Inserting there...");
-            hashTable[newIndex].add(value);
-            System.out.println("Successfully inserted " + "\"" + value + "\"" + " in location: " + newIndex);
-            System.out.println("-------------------------------------------\n");
         }
+        hashTable[newIndex].add(value);
+        System.out.println("Successfully inserted " + "\"" + value + "\"" + " in location: " + newIndex);
+        System.out.println("-------------------------------------------\n");
     }//end of method
 
 

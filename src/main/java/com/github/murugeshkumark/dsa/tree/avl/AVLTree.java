@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.tree.AVLTree;
+package com.github.murugeshkumark.dsa.tree.avl;
 
 import com.github.murugeshkumark.dsa.node.BinaryNode;
 

@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.tree.AVLTree;
+package com.github.murugeshkumark.dsa.tree.avl;
 
 public class Main {
 
