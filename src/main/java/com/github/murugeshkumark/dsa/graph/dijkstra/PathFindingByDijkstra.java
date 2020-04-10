@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.graph.dijkstra;
 
-import com.github.murugeshkumark.dsa.node.WeightedNode;
+import com.github.murugeshkumark.dsa.common.node.WeightedNode;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
@@ -20,7 +20,7 @@ public class PathFindingByDijkstra {
         node.setDistance(0); //This will make sure that we start from this vertex in priority com.github.murugeshkumark.dsa.queue as distance is min
         PriorityQueue<WeightedNode> queue = new PriorityQueue<>(nodeList);
         while (!queue.isEmpty()) {
-            WeightedNode presentNode = queue.remove(); //remove com.github.murugeshkumark.dsa.node with minimum distance from com.github.murugeshkumark.dsa.queue
+            WeightedNode presentNode = queue.remove(); //remove com.github.murugeshkumark.dsa.common.node with minimum distance from com.github.murugeshkumark.dsa.queue
             for (WeightedNode neighbor : presentNode.getNeighbors()) { //for each neighbor
                 if (queue.contains(neighbor)) { //if neighbor is not visited
                     // if 'known distance' of neighbor is greater than new path then,
@@ -38,7 +38,7 @@ public class PathFindingByDijkstra {
         }//end of while loop
 
 
-        //print table of com.github.murugeshkumark.dsa.node with minimum distance and shortest path from source
+        //print table of com.github.murugeshkumark.dsa.common.node with minimum distance and shortest path from source
         for (WeightedNode nodeToCheck : nodeList) {
             System.out.print("Node " + nodeToCheck + ", distance: " + nodeToCheck.getDistance() + ", Path: ");
             pathPrint(nodeToCheck);

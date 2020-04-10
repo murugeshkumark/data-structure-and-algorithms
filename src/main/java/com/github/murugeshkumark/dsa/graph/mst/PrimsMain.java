@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.graph.mst;
 
-import com.github.murugeshkumark.dsa.node.WeightedNode;
+import com.github.murugeshkumark.dsa.common.node.WeightedNode;
 
 import java.util.ArrayList;
 

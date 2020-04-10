@@ -104,9 +104,9 @@ public class HeapByArray {
         int right = (index * 2) + 1;
         int smallestChild;
 
-        if (sizeOfTree < left) { //If there is no child of this com.github.murugeshkumark.dsa.node, then nothing to do. Just return.
+        if (sizeOfTree < left) { //If there is no child of this com.github.murugeshkumark.dsa.common.node, then nothing to do. Just return.
             return;
-        } else if (sizeOfTree == left) { //If there is only left child of this com.github.murugeshkumark.dsa.node, then do a comparison and return.
+        } else if (sizeOfTree == left) { //If there is only left child of this com.github.murugeshkumark.dsa.common.node, then do a comparison and return.
             if (arr[index] > arr[left]) {
                 int tmp = arr[index];
                 arr[index] = arr[left];

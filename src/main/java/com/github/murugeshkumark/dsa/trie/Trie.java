@@ -49,7 +49,7 @@ public class Trie {
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
             TrieNode node = currentNode.children.get(ch);
-            if (node == null) { //CASE#1 -- if com.github.murugeshkumark.dsa.node does not exist for given char then return false
+            if (node == null) { //CASE#1 -- if com.github.murugeshkumark.dsa.common.node does not exist for given char then return false
                 System.out.println("Word: " + word + " does not exists in Trie !");
                 return false;
             }
@@ -102,7 +102,7 @@ public class Trie {
                 parentNode.children.remove(ch);
                 return true;// If this word is not a prefix of some other word, and since this is last
                 // character, we should
-                // return true, indicating we are ok to delete this com.github.murugeshkumark.dsa.node
+                // return true, indicating we are ok to delete this com.github.murugeshkumark.dsa.common.node
             }
         }
 
@@ -119,9 +119,9 @@ public class Trie {
         if (canThisNodeBeDeleted) {
             System.out.println("Character " + ch + " has no dependency, hence deleting it");
             parentNode.children.remove(ch);
-            return true; // Current com.github.murugeshkumark.dsa.node can also be deleted
+            return true; // Current com.github.murugeshkumark.dsa.common.node can also be deleted
         } else {
-            return false; // Someone is dependent on this com.github.murugeshkumark.dsa.node, hence dont delete it
+            return false; // Someone is dependent on this com.github.murugeshkumark.dsa.common.node, hence dont delete it
         }
 
     }

@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.algorithms.sorting;
 
-import com.github.murugeshkumark.dsa.node.GraphNode;
+import com.github.murugeshkumark.dsa.common.node.GraphNode;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -17,7 +17,7 @@ public class TopologicalSort {
 
     void topologicalSort() {
         Stack<GraphNode> stack = new Stack<>();
-        for (GraphNode node : nodeList) { // if a com.github.murugeshkumark.dsa.node is unvisited then run topologicalSort on it
+        for (GraphNode node : nodeList) { // if a com.github.murugeshkumark.dsa.common.node is unvisited then run topologicalSort on it
             if (!node.isVisited())
                 topologicalVisit(node, stack);
         }
@@ -27,7 +27,7 @@ public class TopologicalSort {
     }
 
 
-    // Topological visit by a source com.github.murugeshkumark.dsa.node
+    // Topological visit by a source com.github.murugeshkumark.dsa.common.node
     void topologicalVisit(GraphNode node, Stack<GraphNode> stack) {
         for (GraphNode neighbor : node.getNeighbors()) {    //if neighbor is not visited then recursive call to it
             if (!neighbor.isVisited()) {

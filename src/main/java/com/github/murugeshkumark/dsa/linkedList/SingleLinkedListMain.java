@@ -24,14 +24,14 @@ public class SingleLinkedListMain {
         System.out.println();
 
 
-        System.out.println("\nSearching the com.github.murugeshkumark.dsa.node having value 40...");
+        System.out.println("\nSearching the com.github.murugeshkumark.dsa.common.node having value 40...");
         list.searchNode(40);
 
-        System.out.println("\nSearching the com.github.murugeshkumark.dsa.node having value 500...");
+        System.out.println("\nSearching the com.github.murugeshkumark.dsa.common.node having value 500...");
         list.searchNode(500);
 
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.node having location = 0: ");
+        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 0: ");
         System.out.println("Before Deletion:");
         list.traverseLinkedList();
         list.deletionOfNode(0);
@@ -39,7 +39,7 @@ public class SingleLinkedListMain {
         list.traverseLinkedList();
         System.out.println();
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.node having location = 2: ");
+        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 2: ");
         System.out.println("Before Deletion:");
         list.traverseLinkedList();
         list.deletionOfNode(2);
@@ -48,7 +48,7 @@ public class SingleLinkedListMain {
         System.out.println();
 
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.node having location = 100: ");
+        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 100: ");
         System.out.println("Before Deletion:");
         list.traverseLinkedList();
         list.deletionOfNode(100);

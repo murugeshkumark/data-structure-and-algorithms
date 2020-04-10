@@ -1,21 +1,21 @@
-package com.github.murugeshkumark.dsa.node;
+package com.github.murugeshkumark.dsa.common.node;
 
 import com.github.murugeshkumark.dsa.graph.mst.DisjointSet;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class WeightedNode implements Comparable<WeightedNode> {
+public class WeightedNode2 implements Comparable<WeightedNode2> {
     public String name;
 
-    private ArrayList<WeightedNode> neighbors = new ArrayList<>();
-    private HashMap<WeightedNode, Integer> weightMap = new HashMap<>();
+    private ArrayList<WeightedNode2> neighbors = new ArrayList<>();
+    private HashMap<WeightedNode2, Integer> weightMap = new HashMap<>();
     private boolean isVisited = false;
-    private WeightedNode parent;
+    private WeightedNode2 parent;
     private int distance;
-    private DisjointSet set; //used in DisjointSet Algorithm
+    private DisjointSet set;
 
-    public WeightedNode(String name) {
+    public WeightedNode2(String name) {
         this.name = name;
         distance = Integer.MAX_VALUE;
     }
@@ -24,7 +24,7 @@ public class WeightedNode implements Comparable<WeightedNode> {
         return set;
     }
 
-    public void setSet(DisjointSet set) { //used in DisjointSet Algorithm
+    public void setSet(DisjointSet set) {
         this.set = set;
     }
 
@@ -36,19 +36,19 @@ public class WeightedNode implements Comparable<WeightedNode> {
         this.name = name;
     }
 
-    public ArrayList<WeightedNode> getNeighbors() {
+    public ArrayList<WeightedNode2> getNeighbors() {
         return neighbors;
     }
 
-    public void setNeighbors(ArrayList<WeightedNode> neighbors) {
+    public void setNeighbors(ArrayList<WeightedNode2> neighbors) {
         this.neighbors = neighbors;
     }
 
-    public HashMap<WeightedNode, Integer> getWeightMap() {
+    public HashMap<WeightedNode2, Integer> getWeightMap() {
         return weightMap;
     }
 
-    public void setWeightMap(HashMap<WeightedNode, Integer> weightMap) {
+    public void setWeightMap(HashMap<WeightedNode2, Integer> weightMap) {
         this.weightMap = weightMap;
     }
 
@@ -60,11 +60,11 @@ public class WeightedNode implements Comparable<WeightedNode> {
         this.isVisited = isVisited;
     }
 
-    public WeightedNode getParent() {
+    public WeightedNode2 getParent() {
         return parent;
     }
 
-    public void setParent(WeightedNode parent) {
+    public void setParent(WeightedNode2 parent) {
         this.parent = parent;
     }
 
@@ -82,7 +82,7 @@ public class WeightedNode implements Comparable<WeightedNode> {
     }
 
     @Override
-    public int compareTo(WeightedNode o) {
+    public int compareTo(WeightedNode2 o) {
         return this.distance - o.distance;
     }
 

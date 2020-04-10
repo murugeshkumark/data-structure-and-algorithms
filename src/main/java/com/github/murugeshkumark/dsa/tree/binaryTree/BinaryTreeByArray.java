@@ -19,7 +19,7 @@ public class BinaryTreeByArray {
     }
 
 
-    // New com.github.murugeshkumark.dsa.node should be inserted at the first empty place in the com.github.murugeshkumark.dsa.array
+    // New com.github.murugeshkumark.dsa.common.node should be inserted at the first empty place in the com.github.murugeshkumark.dsa.array
     void insert(int value) {
         if (!isTreeFull()) {
             arr[lastUsedIndex + 1] = value;

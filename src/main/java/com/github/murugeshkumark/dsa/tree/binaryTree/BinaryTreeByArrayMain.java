@@ -47,12 +47,12 @@ public class BinaryTreeByArrayMain {
 
 
         //Delete value from Tree
-        System.out.println("\nDeleting com.github.murugeshkumark.dsa.node 500 from the tree...");
+        System.out.println("\nDeleting com.github.murugeshkumark.dsa.common.node 500 from the tree...");
         tree.delete(500);
 
 
         //Delete value from Tree
-        System.out.println("Deleting com.github.murugeshkumark.dsa.node 40 from the tree...");
+        System.out.println("Deleting com.github.murugeshkumark.dsa.common.node 40 from the tree...");
         tree.delete(40);
 
 

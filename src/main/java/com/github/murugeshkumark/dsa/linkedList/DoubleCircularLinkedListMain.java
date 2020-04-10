@@ -17,28 +17,28 @@ public class DoubleCircularLinkedListMain {
         list.printHeadUsingTail();
 
 
-        System.out.println("\nSearching the com.github.murugeshkumark.dsa.node having value 40: ");
+        System.out.println("\nSearching the com.github.murugeshkumark.dsa.common.node having value 40: ");
         list.searchNode(40);
 
-        System.out.println("\nSearching the com.github.murugeshkumark.dsa.node having value 200: ");
+        System.out.println("\nSearching the com.github.murugeshkumark.dsa.common.node having value 200: ");
         list.searchNode(200);
 
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.node having location = 0: ");
+        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 0: ");
         System.out.println("Before Deletion...");
         list.traverseLinkedList();
         list.deletionOfNode(0);
         System.out.println("After Deletion...");
         list.traverseLinkedList();
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.node having location = 3: ");
+        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 3: ");
         System.out.println("Before Deletion...");
         list.traverseLinkedList();
         list.deletionOfNode(3);
         System.out.println("After Deletion...");
         list.traverseLinkedList();
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.node having location = 20: ");
+        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 20: ");
         System.out.println("Before Deletion...");
         list.traverseLinkedList();
         list.deletionOfNode(20);

@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.tree.dfs;
 
-import com.github.murugeshkumark.dsa.node.GraphNode;
+import com.github.murugeshkumark.dsa.common.node.GraphNode;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ public class DFSRecursive {
 
 
     void dfs() {
-        //if a com.github.murugeshkumark.dsa.node is unvisited then run com.github.murugeshkumark.dsa.tree.dfs on it
+        //if a com.github.murugeshkumark.dsa.common.node is unvisited then run com.github.murugeshkumark.dsa.tree.dfs on it
         for (GraphNode node : nodeList) {
             if (!node.isVisited())
                 dfsVisit(node);
@@ -22,13 +22,13 @@ public class DFSRecursive {
     }
 
 
-    //com.github.murugeshkumark.dsa.tree.dfs traversal by a source com.github.murugeshkumark.dsa.node
+    //com.github.murugeshkumark.dsa.tree.dfs traversal by a source com.github.murugeshkumark.dsa.common.node
     void dfsVisit(GraphNode node) {
-        //mark com.github.murugeshkumark.dsa.node as visited
+        //mark com.github.murugeshkumark.dsa.common.node as visited
         node.setVisited(true);
-        //print the com.github.murugeshkumark.dsa.node
+        //print the com.github.murugeshkumark.dsa.common.node
         System.out.print(node.getName() + " ");
-        //for each neighbor of present com.github.murugeshkumark.dsa.node
+        //for each neighbor of present com.github.murugeshkumark.dsa.common.node
         for (GraphNode neighbor : node.getNeighbors()) {
             //if neighbor is not visited
             if (!neighbor.isVisited()) {

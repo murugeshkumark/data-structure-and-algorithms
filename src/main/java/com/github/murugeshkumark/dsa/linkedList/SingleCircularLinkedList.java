@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.linkedList;
 
-import com.github.murugeshkumark.dsa.node.SingleNode;
+import com.github.murugeshkumark.dsa.common.node.SingleNode;
 
 public class SingleCircularLinkedList {
     private SingleNode head;
@@ -46,7 +46,7 @@ public class SingleCircularLinkedList {
     void insertInLinkedList(int nodeValue, int location) {
         SingleNode node = new SingleNode();
         node.setValue(nodeValue);
-        System.out.println("Inserting new com.github.murugeshkumark.dsa.node at location: " + location);
+        System.out.println("Inserting new com.github.murugeshkumark.dsa.common.node at location: " + location);
         if (!existsLinkedList()) {
             System.out.println("The linked list does not exist!!");
             return; // Linked List does not exists
@@ -56,16 +56,16 @@ public class SingleCircularLinkedList {
             tail.setNext(node); // update tail
         } else if (location >= size) {// insert at last position
             tail.setNext(node);
-            tail = node; // to keep track of last com.github.murugeshkumark.dsa.node
+            tail = node; // to keep track of last com.github.murugeshkumark.dsa.common.node
             tail.setNext(head); // update tail to circularly point head
         } else // insert at specified location
         {
             SingleNode tempNode = head;
             int index = 0;
-            while (index < location - 1) {// loop till we reach specified com.github.murugeshkumark.dsa.node
+            while (index < location - 1) {// loop till we reach specified com.github.murugeshkumark.dsa.common.node
                 tempNode = tempNode.getNext();
                 index++;
-            }// insert new com.github.murugeshkumark.dsa.node after tempNode
+            }// insert new com.github.murugeshkumark.dsa.common.node after tempNode
             node.setNext(tempNode.getNext());
             tempNode.setNext(node);
         }
@@ -137,7 +137,7 @@ public class SingleCircularLinkedList {
 
                 // System.out.print(tempNode.value);
                 if (tempNode.getValue() == nodeValue) {
-                    System.out.print("Found the com.github.murugeshkumark.dsa.node at location: " + i);
+                    System.out.print("Found the com.github.murugeshkumark.dsa.common.node at location: " + i);
                     return true;
                 }
                 tempNode = tempNode.getNext();
@@ -158,10 +158,10 @@ public class SingleCircularLinkedList {
             if (getSize() == 0) { // if there are no more nodes in this list
                 tail = null;
             }
-        } else if (location >= getSize()) { //If location is not in range or equal, then delete last com.github.murugeshkumark.dsa.node
+        } else if (location >= getSize()) { //If location is not in range or equal, then delete last com.github.murugeshkumark.dsa.common.node
             SingleNode tempNode = head;
             for (int i = 0; i < size - 1; i++) {
-                tempNode = tempNode.getNext(); //temp com.github.murugeshkumark.dsa.node points to 2nd last com.github.murugeshkumark.dsa.node
+                tempNode = tempNode.getNext(); //temp com.github.murugeshkumark.dsa.common.node points to 2nd last com.github.murugeshkumark.dsa.common.node
             }
             if (tempNode == head) { //if this is the only element in the list
                 tail = head = null;
@@ -172,12 +172,12 @@ public class SingleCircularLinkedList {
             tail = tempNode;
             setSize(getSize() - 1);
 
-        } else { //if any inside com.github.murugeshkumark.dsa.node is to be deleted
+        } else { //if any inside com.github.murugeshkumark.dsa.common.node is to be deleted
             SingleNode tempNode = head;
             for (int i = 0; i < location - 1; i++) {
                 tempNode = tempNode.getNext(); // we need to traverse till we find the location
             }
-            tempNode.setNext(tempNode.getNext().getNext()); // delete the required com.github.murugeshkumark.dsa.node
+            tempNode.setNext(tempNode.getNext().getNext()); // delete the required com.github.murugeshkumark.dsa.common.node
             setSize(getSize() - 1);
         }//end of else
 

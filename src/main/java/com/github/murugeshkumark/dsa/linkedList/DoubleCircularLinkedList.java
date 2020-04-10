@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.linkedList;
 
-import com.github.murugeshkumark.dsa.node.DoubleNode;
+import com.github.murugeshkumark.dsa.common.node.DoubleNode;
 
 public class DoubleCircularLinkedList {
     private DoubleNode head;
@@ -69,11 +69,11 @@ public class DoubleCircularLinkedList {
             node.setPrev(tail);
             head.setPrev(node);
             tail.setNext(node);
-            tail = node; // to keep track of last com.github.murugeshkumark.dsa.node
+            tail = node; // to keep track of last com.github.murugeshkumark.dsa.common.node
         } else {// insert at specified location
             DoubleNode tempNode = head;
             int index = 0;
-            while (index < location - 1) {// loop till we reach specified com.github.murugeshkumark.dsa.node
+            while (index < location - 1) {// loop till we reach specified com.github.murugeshkumark.dsa.common.node
                 tempNode = tempNode.getNext();
                 index++;
             }
@@ -82,7 +82,7 @@ public class DoubleCircularLinkedList {
             tempNode.setNext(node);
             node.getNext().setPrev(node);
         }
-        size++;// one com.github.murugeshkumark.dsa.node added so size increments
+        size++;// one com.github.murugeshkumark.dsa.common.node added so size increments
     }
 
 
@@ -169,7 +169,7 @@ public class DoubleCircularLinkedList {
             traverseLinkedList();
             for (int i = 0; i < size; i++) {
                 if (tempNode.getValue() == nodeValue) {
-                    System.out.print("Found the com.github.murugeshkumark.dsa.node at location: " + i);
+                    System.out.print("Found the com.github.murugeshkumark.dsa.common.node at location: " + i);
                     return true;
                 }
                 tempNode = tempNode.getNext();
@@ -180,12 +180,12 @@ public class DoubleCircularLinkedList {
     }
 
 
-    // Deletes a com.github.murugeshkumark.dsa.node having a given value
+    // Deletes a com.github.murugeshkumark.dsa.common.node having a given value
     public void deletionOfNode(int location) {
         if (!existsLinkedList()) {
             System.out.println("The linked list does not exist!!");// Linked List does not exists
         } else if (location == 0) { // we want to delete first element
-            if (getSize() == 1) { // if this is the only com.github.murugeshkumark.dsa.node in this list
+            if (getSize() == 1) { // if this is the only com.github.murugeshkumark.dsa.common.node in this list
                 head.setNext(null);
                 head.setPrev(null);
                 head = tail = null;
@@ -196,7 +196,7 @@ public class DoubleCircularLinkedList {
                 tail.setNext(head);
                 setSize(getSize() - 1);
             }
-        } else if (location >= getSize()) { // If location is not in range or equal, then delete last com.github.murugeshkumark.dsa.node
+        } else if (location >= getSize()) { // If location is not in range or equal, then delete last com.github.murugeshkumark.dsa.common.node
             if (getSize() == 1) { // if this is the only element in the list
                 head.setNext(null);
                 head.setPrev(null);
@@ -208,12 +208,12 @@ public class DoubleCircularLinkedList {
             tail.setNext(head);
             head.setPrev(tail);
             setSize(getSize() - 1);
-        } else { // if any inside com.github.murugeshkumark.dsa.node is to be deleted
+        } else { // if any inside com.github.murugeshkumark.dsa.common.node is to be deleted
             DoubleNode tempNode = head;
             for (int i = 0; i < location - 1; i++) {
                 tempNode = tempNode.getNext(); // we need to traverse till we find the location
             }
-            tempNode.setNext(tempNode.getNext().getNext()); // delete the required com.github.murugeshkumark.dsa.node
+            tempNode.setNext(tempNode.getNext().getNext()); // delete the required com.github.murugeshkumark.dsa.common.node
             tempNode.getNext().setPrev(tempNode);
             setSize(getSize() - 1);
         } // end of else

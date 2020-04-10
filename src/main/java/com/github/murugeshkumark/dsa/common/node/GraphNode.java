@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.node;
+package com.github.murugeshkumark.dsa.common.node;
 
 import java.util.ArrayList;
 

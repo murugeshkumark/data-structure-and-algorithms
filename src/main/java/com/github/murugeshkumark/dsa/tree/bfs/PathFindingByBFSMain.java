@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.tree.bfs;
 
-import com.github.murugeshkumark.dsa.node.GraphNode;
+import com.github.murugeshkumark.dsa.common.node.GraphNode;
 
 import java.util.ArrayList;
 

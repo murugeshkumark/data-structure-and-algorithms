@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.tree.avl;
 
-import com.github.murugeshkumark.dsa.node.BinaryNode;
+import com.github.murugeshkumark.dsa.common.node.BinaryNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -93,10 +93,10 @@ public class AVLTree {
 
     // Helper Method
     private int checkBalance(BinaryNode rootLeft, BinaryNode rootRight) {
-        if ((rootLeft == null) && (rootRight == null)) { //if current com.github.murugeshkumark.dsa.node is a leaf com.github.murugeshkumark.dsa.node then no need to check balance of its children
+        if ((rootLeft == null) && (rootRight == null)) { //if current com.github.murugeshkumark.dsa.common.node is a leaf com.github.murugeshkumark.dsa.common.node then no need to check balance of its children
             return 0;
         } else if (rootLeft == null) {
-            return -1 * (rootRight.getHeight() + 1); // if left com.github.murugeshkumark.dsa.node com.github.murugeshkumark.dsa.node is not there then simply return right com.github.murugeshkumark.dsa.node's
+            return -1 * (rootRight.getHeight() + 1); // if left com.github.murugeshkumark.dsa.common.node com.github.murugeshkumark.dsa.common.node is not there then simply return right com.github.murugeshkumark.dsa.common.node's
             // height + 1
             // we need to make it -1 because blank height is considered
             // having height as '-1'
@@ -120,11 +120,11 @@ public class AVLTree {
     }// end of method
 
 
-    // creates a new blank new com.github.murugeshkumark.dsa.node
+    // creates a new blank new com.github.murugeshkumark.dsa.common.node
     public BinaryNode createNewNode(int value) {
         BinaryNode node = new BinaryNode();
         node.setValue(value);
-        node.setHeight(0);// Since this is a leaf com.github.murugeshkumark.dsa.node, its height is 0
+        node.setHeight(0);// Since this is a leaf com.github.murugeshkumark.dsa.common.node, its height is 0
         return node;
     }// end of method
 
@@ -149,7 +149,7 @@ public class AVLTree {
     }// end of method
 
 
-    // Deleting a com.github.murugeshkumark.dsa.node from BST
+    // Deleting a com.github.murugeshkumark.dsa.common.node from BST
     public void deleteNodeOfBST(int value) {
         System.out.println("Deleting " + value + " from AVL Tree ...");
         root = deleteNodeOfBST(root, value);
@@ -165,21 +165,21 @@ public class AVLTree {
             currentNode.setLeft(deleteNodeOfBST(currentNode.getLeft(), value));
         } else if (value > currentNode.getValue()) {
             currentNode.setRight(deleteNodeOfBST(currentNode.getRight(), value));
-        } else { // If currentNode is the com.github.murugeshkumark.dsa.node to be deleted
-            //System.out.println("currentNode is the com.github.murugeshkumark.dsa.node to be deleted");
+        } else { // If currentNode is the com.github.murugeshkumark.dsa.common.node to be deleted
+            //System.out.println("currentNode is the com.github.murugeshkumark.dsa.common.node to be deleted");
             if (currentNode.getLeft() != null && currentNode.getRight() != null) { // if nodeToBeDeleted have both children
                 BinaryNode minNodeForRight = minimumElement(currentNode.getRight());// Finding minimum element from right subtree
-                currentNode.setValue(minNodeForRight.getValue()); // Replacing current com.github.murugeshkumark.dsa.node with minimum com.github.murugeshkumark.dsa.node from right subtree
-                deleteNodeOfBST(currentNode.getRight(), minNodeForRight.getValue());// Deleting minimum com.github.murugeshkumark.dsa.node from right now
+                currentNode.setValue(minNodeForRight.getValue()); // Replacing current com.github.murugeshkumark.dsa.common.node with minimum com.github.murugeshkumark.dsa.common.node from right subtree
+                deleteNodeOfBST(currentNode.getRight(), minNodeForRight.getValue());// Deleting minimum com.github.murugeshkumark.dsa.common.node from right now
             } else if (currentNode.getLeft() != null) {// if nodeToBeDeleted has only left child
                 currentNode = currentNode.getLeft();
             } else if (currentNode.getRight() != null) {// if nodeToBeDeleted has only right child
                 currentNode = currentNode.getRight();
-            } else { // if nodeToBeDeleted do not have child (Leaf com.github.murugeshkumark.dsa.node)
-                //System.out.println("This com.github.murugeshkumark.dsa.node is leaf com.github.murugeshkumark.dsa.node");
+            } else { // if nodeToBeDeleted do not have child (Leaf com.github.murugeshkumark.dsa.common.node)
+                //System.out.println("This com.github.murugeshkumark.dsa.common.node is leaf com.github.murugeshkumark.dsa.common.node");
                 currentNode = null;
             }
-            return currentNode;// if it is a leaf com.github.murugeshkumark.dsa.node,then no need to do balancing for this com.github.murugeshkumark.dsa.node, do only for its ancestors
+            return currentNode;// if it is a leaf com.github.murugeshkumark.dsa.common.node,then no need to do balancing for this com.github.murugeshkumark.dsa.common.node, do only for its ancestors
         }
 
         // THIS IS WHERE WE WILL DO AVL SPECIFIC WORK

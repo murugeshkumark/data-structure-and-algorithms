@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.tree.binaryTree;
 
-import com.github.murugeshkumark.dsa.node.BinaryNode;
+import com.github.murugeshkumark.dsa.common.node.BinaryNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -15,13 +15,13 @@ public class BinaryTreeByLinkedList {
     }
 
 
-    // inserts a new com.github.murugeshkumark.dsa.node at deepest place in Tree
+    // inserts a new com.github.murugeshkumark.dsa.common.node at deepest place in Tree
     void insert(int value) {
         BinaryNode node = new BinaryNode();
         node.setValue(value);
         if (root == null) {
             root = node;
-            System.out.println("Successfully inserted new com.github.murugeshkumark.dsa.node at Root !");
+            System.out.println("Successfully inserted new com.github.murugeshkumark.dsa.common.node at Root !");
             return;
         }
         Queue<BinaryNode> queue = new LinkedList<>();
@@ -30,11 +30,11 @@ public class BinaryTreeByLinkedList {
             BinaryNode presentNode = queue.remove();
             if (presentNode.getLeft() == null) {
                 presentNode.setLeft(node);
-                System.out.println("Successfully inserted new com.github.murugeshkumark.dsa.node !");
+                System.out.println("Successfully inserted new com.github.murugeshkumark.dsa.common.node !");
                 break;
             } else if (presentNode.getRight() == null) {
                 presentNode.setRight(node);
-                System.out.println("Successfully inserted new com.github.murugeshkumark.dsa.node !");
+                System.out.println("Successfully inserted new com.github.murugeshkumark.dsa.common.node !");
                 break;
             } else {
                 queue.add(presentNode.getLeft());
@@ -64,17 +64,17 @@ public class BinaryTreeByLinkedList {
     }//end of method
 
 
-    // delete com.github.murugeshkumark.dsa.node from binary tree
+    // delete com.github.murugeshkumark.dsa.common.node from binary tree
     void deleteNodeOfBinaryTree(int value) {
         Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
             BinaryNode presentNode = queue.remove();
-            // if com.github.murugeshkumark.dsa.node is found then copy deepest com.github.murugeshkumark.dsa.node here and delete deepest com.github.murugeshkumark.dsa.node.
+            // if com.github.murugeshkumark.dsa.common.node is found then copy deepest com.github.murugeshkumark.dsa.common.node here and delete deepest com.github.murugeshkumark.dsa.common.node.
             if (presentNode.getValue() == value) {
                 presentNode.setValue(getDeepestNode().getValue());
                 DeleteDeepestNode();
-                System.out.println("Deleted the com.github.murugeshkumark.dsa.node !!");
+                System.out.println("Deleted the com.github.murugeshkumark.dsa.common.node !!");
                 return;
             } else {
                 if (presentNode.getLeft() != null)
@@ -83,11 +83,11 @@ public class BinaryTreeByLinkedList {
                     queue.add(presentNode.getRight());
             }
         }//end of while loop
-        System.out.println("Did not find the com.github.murugeshkumark.dsa.node!!");
+        System.out.println("Did not find the com.github.murugeshkumark.dsa.common.node!!");
     }
 
 
-    //Delete deepest com.github.murugeshkumark.dsa.node
+    //Delete deepest com.github.murugeshkumark.dsa.common.node
     public void DeleteDeepestNode() {
         Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
@@ -109,7 +109,7 @@ public class BinaryTreeByLinkedList {
     }//end of method
 
 
-    // get last com.github.murugeshkumark.dsa.node of last level of binary tree
+    // get last com.github.murugeshkumark.dsa.common.node of last level of binary tree
     public BinaryNode getDeepestNode() {
         // make an empty com.github.murugeshkumark.dsa.queue. Queue is Interface and LinkedList is class
         Queue<BinaryNode> queue = new LinkedList<>();

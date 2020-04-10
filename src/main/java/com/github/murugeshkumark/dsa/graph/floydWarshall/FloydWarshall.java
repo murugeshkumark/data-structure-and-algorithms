@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.graph.floydWarshall;
 
-import com.github.murugeshkumark.dsa.node.WeightedNode;
+import com.github.murugeshkumark.dsa.common.node.WeightedNode;
 
 import java.util.ArrayList;
 
@@ -45,9 +45,9 @@ public class FloydWarshall {
         }//end of loop
 
 
-        // Print table of com.github.murugeshkumark.dsa.node with minimum distance and shortest path from each source
+        // Print table of com.github.murugeshkumark.dsa.common.node with minimum distance and shortest path from each source
         for (int i = 0; i < size; i++) {
-            System.out.print("Printing distance list for com.github.murugeshkumark.dsa.node " + nodeList.get(i) + ": ");
+            System.out.print("Printing distance list for com.github.murugeshkumark.dsa.common.node " + nodeList.get(i) + ": ");
             for (int j = 0; j < size; j++) {
                 System.out.print(V[i][j] + " ");
             }

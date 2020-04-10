@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.tree.bfs;
 
-import com.github.murugeshkumark.dsa.node.GraphNode;
+import com.github.murugeshkumark.dsa.common.node.GraphNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -23,17 +23,17 @@ public class PathFindingByBFS {
     }//end of method
 
 
-    //BFS Traversal by a source com.github.murugeshkumark.dsa.node
+    //BFS Traversal by a source com.github.murugeshkumark.dsa.common.node
     void BFSForSSSP(GraphNode node) {
         LinkedList<GraphNode> queue = new LinkedList<>();
-        queue.add(node);  //add source com.github.murugeshkumark.dsa.node to com.github.murugeshkumark.dsa.queue
+        queue.add(node);  //add source com.github.murugeshkumark.dsa.common.node to com.github.murugeshkumark.dsa.queue
         while (!queue.isEmpty()) {
             GraphNode presentNode = queue.remove(0);
             presentNode.setVisited(true);
-            System.out.print("Printing path for com.github.murugeshkumark.dsa.node " + presentNode.getName() + ": ");
+            System.out.print("Printing path for com.github.murugeshkumark.dsa.common.node " + presentNode.getName() + ": ");
             pathPrint(presentNode);
             System.out.println();
-            for (GraphNode neighbor : presentNode.getNeighbors()) {  //for each neighbor of present com.github.murugeshkumark.dsa.node
+            for (GraphNode neighbor : presentNode.getNeighbors()) {  //for each neighbor of present com.github.murugeshkumark.dsa.common.node
                 if (!neighbor.isVisited()) {
                     queue.add(neighbor);
                     neighbor.setVisited(true);
