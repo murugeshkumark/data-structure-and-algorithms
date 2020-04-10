@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.algorithms.sorting;
 
-import com.github.murugeshkumark.ds.common.node.GraphNode;
+import com.github.murugeshkumark.node.GraphNode;
 
 import java.util.ArrayList;
 import java.util.Stack;

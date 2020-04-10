@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.ds.linkedlist;
 
-import com.github.murugeshkumark.ds.common.node.DoubleNode;
+import com.github.murugeshkumark.node.DoubleNode;
 
 public class DoubleLinkedList {
     DoubleNode head;

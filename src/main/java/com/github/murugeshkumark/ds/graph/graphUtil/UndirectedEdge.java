@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.ds.graph.graphUtil;
 
-import com.github.murugeshkumark.ds.common.node.WeightedNode;
+import com.github.murugeshkumark.node.WeightedNode;
 
 public class UndirectedEdge {
     private WeightedNode first;

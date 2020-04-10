@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.ds.graph.floydWarshall;
 
-import com.github.murugeshkumark.ds.common.node.WeightedNode;
+import com.github.murugeshkumark.node.WeightedNode;
 
 import java.util.ArrayList;
 

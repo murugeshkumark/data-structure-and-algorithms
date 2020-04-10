@@ -1,7 +1,7 @@
 package com.github.murugeshkumark.ds.graph.mst;
 
 import com.github.murugeshkumark.ds.graph.graphUtil.UndirectedEdge;
-import com.github.murugeshkumark.ds.common.node.WeightedNode;
+import com.github.murugeshkumark.node.WeightedNode;
 
 import java.util.ArrayList;
 import java.util.Comparator;

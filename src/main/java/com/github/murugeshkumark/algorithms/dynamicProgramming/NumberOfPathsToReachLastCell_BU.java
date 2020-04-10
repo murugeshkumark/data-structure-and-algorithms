@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.algorithms.dynamicProgramming;
 
-import com.github.murugeshkumark.ds.common.node.NumberOfPathsNode;
+import com.github.murugeshkumark.node.NumberOfPathsNode;
 
 public class NumberOfPathsToReachLastCell_BU {
 

@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.ds.linkedlist;
 
-import com.github.murugeshkumark.ds.common.node.SingleNode;
+import com.github.murugeshkumark.node.SingleNode;
 
 public class SingleLinkedList {
     private SingleNode head;

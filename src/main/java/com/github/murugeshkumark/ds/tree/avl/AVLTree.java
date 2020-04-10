@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.ds.tree.avl;
 
-import com.github.murugeshkumark.ds.common.node.BinaryNode;
+import com.github.murugeshkumark.node.BinaryNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

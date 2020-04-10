@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.ds.common.node;
+package com.github.murugeshkumark.node;
 
 
 public class DoubleNode {
