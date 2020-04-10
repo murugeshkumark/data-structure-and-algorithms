@@ -5,7 +5,7 @@ import com.github.murugeshkumark.dsa.common.node.GraphNode;
 import java.util.ArrayList;
 
 public class DFSRecursive {
-    ArrayList<GraphNode> nodeList;
+    private final ArrayList<GraphNode> nodeList;
 
 
     public DFSRecursive(ArrayList<GraphNode> nodeList) {
