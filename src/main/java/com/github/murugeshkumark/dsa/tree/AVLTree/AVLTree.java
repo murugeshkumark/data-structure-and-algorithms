@@ -1,8 +1,9 @@
 package com.github.murugeshkumark.dsa.tree.AVLTree;
 
+import com.github.murugeshkumark.dsa.node.BinaryNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
-import com.github.murugeshkumark.dsa.node.*;
 
 public class AVLTree {
 	BinaryNode root;

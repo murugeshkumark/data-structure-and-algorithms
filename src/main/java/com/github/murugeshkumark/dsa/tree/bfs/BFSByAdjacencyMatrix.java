@@ -1,7 +1,9 @@
 package com.github.murugeshkumark.dsa.tree.bfs;
+
+import com.github.murugeshkumark.dsa.node.GraphNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
-import com.github.murugeshkumark.dsa.node.GraphNode;
 
 public class BFSByAdjacencyMatrix {
 	ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();

@@ -1,6 +1,8 @@
 package com.github.murugeshkumark.dsa.tree.bfs;
+
+import com.github.murugeshkumark.dsa.node.GraphNode;
+
 import java.util.ArrayList;
-import com.github.murugeshkumark.dsa.node.*;
 
 public class BFSByLinkedListMain {
 

@@ -1,5 +1,8 @@
 package com.github.murugeshkumark.dsa.algorithms.greedyAlgorithms;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class FractionalKnapsack {
 

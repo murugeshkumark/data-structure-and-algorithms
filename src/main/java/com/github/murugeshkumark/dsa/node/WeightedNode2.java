@@ -1,8 +1,9 @@
 package com.github.murugeshkumark.dsa.node;
 
-import java.util.*;
-
 import com.github.murugeshkumark.dsa.graph.mst.DisjointSet;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class WeightedNode2 implements Comparable<WeightedNode2> {
 	public String name;

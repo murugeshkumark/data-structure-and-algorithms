@@ -1,7 +1,9 @@
 package com.github.murugeshkumark.dsa.graph.dijkstra;
-import java.util.*;
 
-import com.github.murugeshkumark.dsa.node.*;
+import com.github.murugeshkumark.dsa.node.WeightedNode;
+
+import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 public class PathFindingByDijkstra {
 	ArrayList<WeightedNode> nodeList = new ArrayList<WeightedNode>();

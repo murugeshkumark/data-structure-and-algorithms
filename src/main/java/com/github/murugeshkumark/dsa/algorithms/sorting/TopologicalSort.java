@@ -1,7 +1,9 @@
 package com.github.murugeshkumark.dsa.algorithms.sorting;
+
+import com.github.murugeshkumark.dsa.node.GraphNode;
+
 import java.util.ArrayList;
 import java.util.Stack;
-import com.github.murugeshkumark.dsa.node.GraphNode;
 
 public class TopologicalSort {
 	ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();

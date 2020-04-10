@@ -1,11 +1,11 @@
 package com.github.murugeshkumark.dsa.graph.mst;
 
+import com.github.murugeshkumark.dsa.graph.graphUtil.UndirectedEdge;
+import com.github.murugeshkumark.dsa.node.WeightedNode;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-
-import com.github.murugeshkumark.dsa.graph.graphUtil.UndirectedEdge;
-import com.github.murugeshkumark.dsa.node.WeightedNode;
 
 public class Kruskal {
 	ArrayList<WeightedNode> nodeList = new ArrayList<WeightedNode>();

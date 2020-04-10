@@ -1,6 +1,9 @@
 package com.github.murugeshkumark.dsa.tree.dfs;
-import java.util.*;
+
 import com.github.murugeshkumark.dsa.node.GraphNode;
+
+import java.util.ArrayList;
+import java.util.Stack;
 
 public class DFSIterative {
 	ArrayList<GraphNode> nodeList = new ArrayList<GraphNode>();

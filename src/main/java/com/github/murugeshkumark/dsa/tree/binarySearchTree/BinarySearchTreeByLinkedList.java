@@ -1,11 +1,10 @@
 package com.github.murugeshkumark.dsa.tree.binarySearchTree;
 
 
+import com.github.murugeshkumark.dsa.node.BinaryNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
-
-
-import com.github.murugeshkumark.dsa.node.BinaryNode;
 
 public class BinarySearchTreeByLinkedList {
 

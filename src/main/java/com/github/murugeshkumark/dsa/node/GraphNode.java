@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.node;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class GraphNode {
 	private String name;

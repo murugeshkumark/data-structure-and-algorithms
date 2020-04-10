@@ -1,7 +1,9 @@
 package com.github.murugeshkumark.dsa.tree.binaryTree;
-import java.util.*;
 
 import com.github.murugeshkumark.dsa.node.BinaryNode;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTreeByLinkedList {
 	BinaryNode root;
