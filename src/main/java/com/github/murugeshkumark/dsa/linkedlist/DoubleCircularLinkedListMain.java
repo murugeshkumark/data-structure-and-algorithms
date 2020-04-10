@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.dsa.linkedList;
+package com.github.murugeshkumark.dsa.linkedlist;
 
 public class DoubleCircularLinkedListMain {
 

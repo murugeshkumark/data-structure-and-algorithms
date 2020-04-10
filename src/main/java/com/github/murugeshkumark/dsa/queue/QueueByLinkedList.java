@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.dsa.queue;
 
-import com.github.murugeshkumark.dsa.linkedList.SingleLinkedList;
+import com.github.murugeshkumark.dsa.linkedlist.SingleLinkedList;
 
 public class QueueByLinkedList {
 
