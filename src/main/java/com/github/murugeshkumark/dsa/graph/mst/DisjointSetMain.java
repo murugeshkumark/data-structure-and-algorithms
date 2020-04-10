@@ -6,18 +6,18 @@ import java.util.ArrayList;
 
 public class DisjointSetMain {
 
-	public static void main(String[] args) {
-		
-		// Constructor for ArrayList
-		ArrayList<WeightedNode> nodeList = new ArrayList<>();
+    public static void main(String[] args) {
 
-		// create 10 nodes: 1-10
-		for (int i = 0; i < 10; i++) {
-			nodeList.add(new WeightedNode("" + (char) (65 + i)));
-		}
+        // Constructor for ArrayList
+        ArrayList<WeightedNode> nodeList = new ArrayList<>();
 
-		// Calling DisjointSet
-		DisjointSet.driver(nodeList);
+        // create 10 nodes: 1-10
+        for (int i = 0; i < 10; i++) {
+            nodeList.add(new WeightedNode("" + (char) (65 + i)));
+        }
 
-	}// end of method
+        // Calling DisjointSet
+        DisjointSet.driver(nodeList);
+
+    }// end of method
 }// end of class

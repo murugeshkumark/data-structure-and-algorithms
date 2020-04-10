@@ -1,46 +1,46 @@
 package com.github.murugeshkumark.dsa.node;
 
 public class BinaryNodeWithParent {
-	private int value;
-	private BinaryNodeWithParent parent;
-	private BinaryNodeWithParent left;
-	private BinaryNodeWithParent right;
-	
-	public int getValue() {
-		return value;
-	}
+    private int value;
+    private BinaryNodeWithParent parent;
+    private BinaryNodeWithParent left;
+    private BinaryNodeWithParent right;
 
-	public void setValue(int value) {
-		this.value = value;
-	}
+    public int getValue() {
+        return value;
+    }
 
-	public BinaryNodeWithParent getParent() {
-		return parent;
-	}
+    public void setValue(int value) {
+        this.value = value;
+    }
 
-	public void setParent(BinaryNodeWithParent parent) {
-		this.parent = parent;
-	}
+    public BinaryNodeWithParent getParent() {
+        return parent;
+    }
 
-	public BinaryNodeWithParent getLeft() {
-		return left;
-	}
+    public void setParent(BinaryNodeWithParent parent) {
+        this.parent = parent;
+    }
 
-	public void setLeft(BinaryNodeWithParent left) {
-		this.left = left;
-	}
+    public BinaryNodeWithParent getLeft() {
+        return left;
+    }
 
-	public BinaryNodeWithParent getRight() {
-		return right;
-	}
+    public void setLeft(BinaryNodeWithParent left) {
+        this.left = left;
+    }
 
-	public void setRight(BinaryNodeWithParent right) {
-		this.right = right;
-	}
+    public BinaryNodeWithParent getRight() {
+        return right;
+    }
 
-	@Override
-	public String toString() {
-		return value+"";
-	}
+    public void setRight(BinaryNodeWithParent right) {
+        this.right = right;
+    }
+
+    @Override
+    public String toString() {
+        return value + "";
+    }
 
 }

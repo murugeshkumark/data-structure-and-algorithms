@@ -1,28 +1,28 @@
 package com.github.murugeshkumark.dsa.node;
 
-public  class SingleNode {
-	private int value;
-	private SingleNode next;
-	
-public int getValue() {
-		return value;
-	}
+public class SingleNode {
+    private int value;
+    private SingleNode next;
 
-	public void setValue(int value) {
-		this.value = value;
-	}
+    public int getValue() {
+        return value;
+    }
 
-	public SingleNode getNext() {
-		return next;
-	}
+    public void setValue(int value) {
+        this.value = value;
+    }
 
-	public void setNext(SingleNode next) {
-		this.next = next;
-	}
+    public SingleNode getNext() {
+        return next;
+    }
 
-@Override
-public String toString() {
-	return  value + "";
-}
+    public void setNext(SingleNode next) {
+        this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return value + "";
+    }
 
 }

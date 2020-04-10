@@ -2,37 +2,37 @@ package com.github.murugeshkumark.dsa.node;
 
 
 public class DoubleNode {
-	private int value;
-	private DoubleNode next;
-	private DoubleNode prev;
-	
-	public int getValue() {
-		return value;
-	}
+    private int value;
+    private DoubleNode next;
+    private DoubleNode prev;
 
-	public void setValue(int value) {
-		this.value = value;
-	}
+    public int getValue() {
+        return value;
+    }
 
-	public DoubleNode getNext() {
-		return next;
-	}
+    public void setValue(int value) {
+        this.value = value;
+    }
 
-	public void setNext(DoubleNode next) {
-		this.next = next;
-	}
+    public DoubleNode getNext() {
+        return next;
+    }
 
-	public DoubleNode getPrev() {
-		return prev;
-	}
+    public void setNext(DoubleNode next) {
+        this.next = next;
+    }
 
-	public void setPrev(DoubleNode prev) {
-		this.prev = prev;
-	}
+    public DoubleNode getPrev() {
+        return prev;
+    }
 
-	@Override
-	public String toString() {
-		return  value + "";
-	}
+    public void setPrev(DoubleNode prev) {
+        this.prev = prev;
+    }
+
+    @Override
+    public String toString() {
+        return value + "";
+    }
 
 }
