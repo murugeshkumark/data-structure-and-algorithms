@@ -19,7 +19,7 @@ public class BFSByAdjacencyMatrixMain {
         }
 
 
-        //Pass Graph arraylist for further processing
+        //Pass Graph ArrayList for further processing
         BFSByAdjacencyMatrix graph = new BFSByAdjacencyMatrix(nodeList);
 
 

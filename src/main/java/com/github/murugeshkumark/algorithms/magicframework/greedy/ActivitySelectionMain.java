@@ -8,7 +8,7 @@ public class ActivitySelectionMain {
         //Create an ArrayList to store all activities
         ArrayList<Activity> activityList = new ArrayList<>();
 
-        //Insert activities in Arraylist
+        //Insert activities in ArrayList
         activityList.add(new Activity("A1", 0, 6));
         activityList.add(new Activity("A2", 3, 4));
         activityList.add(new Activity("A3", 1, 2));
@@ -23,7 +23,7 @@ public class ActivitySelectionMain {
         }
 
         //Perform calculation on activities
-        ActivitiySelection.activitySelection(activityList);
+        ActivitySelection.activitySelection(activityList);
 
     }//end of method
 }//end of class

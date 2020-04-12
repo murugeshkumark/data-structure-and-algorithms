@@ -1,7 +1,5 @@
 package com.github.murugeshkumark.common.node;
 
-import com.github.murugeshkumark.common.node.WeightedNode;
-
 public class UndirectedEdge {
     private WeightedNode first;
     private WeightedNode second;

@@ -3,7 +3,7 @@ package com.github.murugeshkumark.algorithms.magicframework.greedy;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class ActivitiySelection {
+public class ActivitySelection {
 
     static void activitySelection(ArrayList<Activity> activityList) {
 
@@ -11,7 +11,7 @@ public class ActivitiySelection {
         //This needs to be done because this will be required in Sort method
         Comparator<Activity> finishTimeComparator = Comparator.comparingInt(Activity::getFinishTime);
 
-        //Sort all the objects stored in the Arraylist by 'FinishTime' variable
+        //Sort all the objects stored in the ArrayList by 'FinishTime' variable
         activityList.sort(finishTimeComparator);
         Activity previousActivity = activityList.get(0);
 

@@ -46,7 +46,7 @@ public class BFSByAdjacencyMatrix {
     }//end of method
 
 
-    // get all neighbors of a particular node by checking adjacency matrix and add it to neighbours arraylist
+    // get all neighbors of a particular node by checking adjacency matrix and add it to neighbours ArrayList
     public ArrayList<GraphNode> getNeighbors(GraphNode node) {
         ArrayList<GraphNode> neighbors = new ArrayList<>();
 
