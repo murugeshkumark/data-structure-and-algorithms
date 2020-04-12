@@ -13,7 +13,7 @@ public class CircularQueueByArray {
         this.size = size;
         this.topOfQueue = -1;
         start = -1;
-        System.out.println("Successfully created an empty com.github.murugeshkumark.dsa.queue of size: " + size);
+        System.out.println("Successfully created an empty queue of size: " + size);
     }//end of method
 
 
@@ -24,13 +24,13 @@ public class CircularQueueByArray {
             System.out.println("\nQueue overflow error!!");
         } else {
             initializeStartOfArray();
-            if (topOfQueue + 1 == size) { //if top is already at last cell of com.github.murugeshkumark.dsa.array, then reset it to first cell
+            if (topOfQueue + 1 == size) { //if top is already at last cell of array, then reset it to first cell
                 topOfQueue = 0;
             } else {
                 topOfQueue++;
             }
             arr[topOfQueue] = value;
-            System.out.println("\nSuccessfully inserted " + value + " in the com.github.murugeshkumark.dsa.queue");
+            System.out.println("\nSuccessfully inserted " + value + " in the queue");
         }
     }//end of method
 
@@ -50,11 +50,11 @@ public class CircularQueueByArray {
             System.out.println("Before Dequeue..");
             printArray();
             System.out.println("\nDequeing value from Queue...");
-            System.out.println("Dequeued: " + arr[start] + " from com.github.murugeshkumark.dsa.queue");
+            System.out.println("Dequeued: " + arr[start] + " from queue");
             arr[start] = 0; //initialize the unused cell to 0
             if (start == topOfQueue) { //if there is only 1 element in Queue
                 start = topOfQueue = -1;
-            } else if (start + 1 == size) { //if start has reached end of com.github.murugeshkumark.dsa.array, then start again from 0
+            } else if (start + 1 == size) { //if start has reached end of array, then start again from 0
                 start = 0;
             } else {
                 start++;
@@ -80,12 +80,12 @@ public class CircularQueueByArray {
 
 
     public void peekOperation() {
-        //if com.github.murugeshkumark.dsa.stack is not empty, return the value on top of com.github.murugeshkumark.dsa.stack
+        //if stack is not empty, return the value on top of stack
         if (!isQueueEmpty()) {
-            System.out.println("\nPeeking value from com.github.murugeshkumark.dsa.queue...");
+            System.out.println("\nPeeking value from queue...");
             System.out.println(arr[start]);
         } else {
-            System.out.println("The com.github.murugeshkumark.dsa.queue is empty!!");
+            System.out.println("The queue is empty!!");
         }
     }//end of method
 
@@ -97,7 +97,7 @@ public class CircularQueueByArray {
     }//end of method
 
 
-    //Print entire com.github.murugeshkumark.dsa.array
+    //Print entire array
     public void printArray() {
         System.out.println("Array now...");
         for (int i = 0; i < size; i++) {

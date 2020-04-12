@@ -14,7 +14,7 @@ public class DFSRecursive {
 
 
     void dfs() {
-        //if a com.github.murugeshkumark.dsa.common.node is unvisited then run com.github.murugeshkumark.dsa.tree.dfs on it
+        //if a node is unvisited then run dfs on it
         for (GraphNode node : nodeList) {
             if (!node.isVisited())
                 dfsVisit(node);
@@ -22,17 +22,17 @@ public class DFSRecursive {
     }
 
 
-    //com.github.murugeshkumark.dsa.tree.dfs traversal by a source com.github.murugeshkumark.dsa.common.node
+    //dfs traversal by a source node
     void dfsVisit(GraphNode node) {
-        //mark com.github.murugeshkumark.dsa.common.node as visited
+        //mark node as visited
         node.setVisited(true);
-        //print the com.github.murugeshkumark.dsa.common.node
+        //print the node
         System.out.print(node.getName() + " ");
-        //for each neighbor of present com.github.murugeshkumark.dsa.common.node
+        //for each neighbor of present node
         for (GraphNode neighbor : node.getNeighbors()) {
             //if neighbor is not visited
             if (!neighbor.isVisited()) {
-                //recursive call to com.github.murugeshkumark.dsa.tree.dfs function
+                //recursive call to dfs function
                 dfsVisit(neighbor);
             }
         }

@@ -13,7 +13,7 @@ public class HeapSortMain {
 
         hs.sort();
 
-        System.out.println("\n\nAfter com.github.murugeshkumark.dsa.algorithms.sorting: ");
+        System.out.println("\n\nAfter sorting: ");
         hs.printArray();
     }//end of method
 

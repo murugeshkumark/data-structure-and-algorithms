@@ -6,7 +6,7 @@ public class StackByLinkedListMain {
 
         StackByLinkedList stack = new StackByLinkedList();
 
-        System.out.println("Pushing 10 values into com.github.murugeshkumark.dsa.stack");
+        System.out.println("Pushing 10 values into stack");
         for (int i = 1; i <= 10; i++) {
             stack.push(i * 10);
         }
@@ -16,7 +16,7 @@ public class StackByLinkedListMain {
         System.out.println(stack.peek());
         System.out.println();
 
-        System.out.println("Poping 11 values from com.github.murugeshkumark.dsa.stack");
+        System.out.println("Poping 11 values from stack");
         for (int i = 1; i <= 11; i++) {
             System.out.println(stack.pop());
         }

@@ -12,7 +12,7 @@ public class HeapSort {
 
 
     public void sort() {
-        HeapByArray hba = new HeapByArray(arr.length); //We will reuse HeapByArray class to do com.github.murugeshkumark.dsa.algorithms.sorting
+        HeapByArray hba = new HeapByArray(arr.length); //We will reuse HeapByArray class to do sorting
         for (int value : arr) { //Insert in Heap
             hba.insertInHeap(value);
         }

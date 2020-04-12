@@ -19,7 +19,7 @@ public class BFSByAdjacencyMatrix {
 
     //BFS Algorithm
     void bfs() {
-        for (GraphNode node : nodeList) { //if a com.github.murugeshkumark.dsa.common.node is unvisited then run com.github.murugeshkumark.dsa.tree.bfs on it
+        for (GraphNode node : nodeList) { //if a node is unvisited then run bfs on it
             if (!node.isVisited())
                 bfsVisit(node);
         }
@@ -29,14 +29,14 @@ public class BFSByAdjacencyMatrix {
     //BFS internal method
     void bfsVisit(GraphNode node) {
         LinkedList<GraphNode> queue = new LinkedList<>();
-        queue.add(node); //add source com.github.murugeshkumark.dsa.common.node to com.github.murugeshkumark.dsa.queue
+        queue.add(node); //add source node to queue
         while (!queue.isEmpty()) {
             GraphNode presentNode = queue.remove(0);
             presentNode.setVisited(true);
             System.out.print(presentNode.getName() + " ");
 
             ArrayList<GraphNode> neighbors = getNeighbors(presentNode);
-            for (GraphNode neighbor : neighbors) {    //for each neighbor of present com.github.murugeshkumark.dsa.common.node
+            for (GraphNode neighbor : neighbors) {    //for each neighbor of present node
                 if (!neighbor.isVisited()) {
                     queue.add(neighbor);
                     neighbor.setVisited(true);
@@ -46,11 +46,11 @@ public class BFSByAdjacencyMatrix {
     }//end of method
 
 
-    // get all neighbors of a particular com.github.murugeshkumark.dsa.common.node by checking adjacency matrix and add it to neighbours arraylist
+    // get all neighbors of a particular node by checking adjacency matrix and add it to neighbours arraylist
     public ArrayList<GraphNode> getNeighbors(GraphNode node) {
         ArrayList<GraphNode> neighbors = new ArrayList<>();
 
-        //gets row# to search in com.github.murugeshkumark.dsa.common.node index
+        //gets row# to search in node index
         int nodeIndex = node.getIndex();
 
         for (int i = 0; i < adjacencyMatrix.length; i++) {
@@ -65,7 +65,7 @@ public class BFSByAdjacencyMatrix {
 
     // add an undirected edge between two nodes
     public void addUndirectedEdge(int i, int j) {
-        //decrement i, j for com.github.murugeshkumark.dsa.array indexes
+        //decrement i, j for array indexes
         i--;
         j--;
         adjacencyMatrix[i][j] = 1;

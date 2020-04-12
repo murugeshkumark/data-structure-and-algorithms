@@ -47,7 +47,7 @@ public class BucketSort {
         int minValue = Integer.MAX_VALUE;
 
 
-        //Find the min and max value from the com.github.murugeshkumark.dsa.array
+        //Find the min and max value from the array
         for (int value : arr) {
             if (value < minValue) {
                 minValue = value;
@@ -57,7 +57,7 @@ public class BucketSort {
         }
 
 
-        //Create an com.github.murugeshkumark.dsa.array of buckets
+        //Create an array of buckets
         ArrayList<Integer>[] buckets = new ArrayList[numberOfBuckets];
 
 

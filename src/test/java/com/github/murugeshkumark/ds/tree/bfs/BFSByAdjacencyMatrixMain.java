@@ -37,7 +37,7 @@ public class BFSByAdjacencyMatrixMain {
         graph.addUndirectedEdge(8, 9);
         graph.addUndirectedEdge(9, 10);
 
-        //com.github.murugeshkumark.dsa.tree.bfs from v1
+        //bfs from v1
         System.out.println("Printing BFS from source: V1");
         graph.bfs();
     }

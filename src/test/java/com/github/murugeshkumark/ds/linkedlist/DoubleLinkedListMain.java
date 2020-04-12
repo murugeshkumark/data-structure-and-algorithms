@@ -20,10 +20,10 @@ public class DoubleLinkedListMain {
         list.traverseLinkedList();
 
 
-        System.out.println("\nSearching the com.github.murugeshkumark.dsa.common.node having value 40: ");
+        System.out.println("\nSearching the node having value 40: ");
         list.searchNode(40);
 
-        System.out.println("\n\nSearching the com.github.murugeshkumark.dsa.common.node having value 400: ");
+        System.out.println("\n\nSearching the node having value 400: ");
         list.searchNode(400);
 
 
@@ -33,7 +33,7 @@ public class DoubleLinkedListMain {
         list.traverseLinkedListInReverseOrder();
 
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 2: ");
+        System.out.println("\n\nDeleting the node having location = 2: ");
         System.out.println("List before deletion: ");
         list.traverseLinkedList();
         list.deletionOfNode(2);
@@ -41,7 +41,7 @@ public class DoubleLinkedListMain {
         list.traverseLinkedList();
 
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 3: ");
+        System.out.println("\n\nDeleting the node having location = 3: ");
         System.out.println("List before deletion: ");
         list.traverseLinkedList();
         list.deletionOfNode(3);

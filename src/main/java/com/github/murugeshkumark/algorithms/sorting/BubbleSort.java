@@ -14,7 +14,7 @@ public class BubbleSort {
     }//end of method
 
 
-    /* Prints the com.github.murugeshkumark.dsa.array */
+    /* Prints the array */
     void printArray(int[] arr) {
         int n = arr.length;
         for (int value : arr) System.out.print(value + " ");

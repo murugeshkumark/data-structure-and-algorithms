@@ -26,7 +26,7 @@ public class BinarySearchTreeByLinkedList {
 
     // Helper Method
     BinaryNode insert(BinaryNode currentNode, int value) {
-        if (currentNode == null) { // if root com.github.murugeshkumark.dsa.common.node is blank then insert new com.github.murugeshkumark.dsa.common.node there
+        if (currentNode == null) { // if root node is blank then insert new node there
             System.out.println("Successfully inserted " + value + " in BST");
             return createNewNode(value);
         } else if (value <= currentNode.getValue()) {
@@ -39,7 +39,7 @@ public class BinarySearchTreeByLinkedList {
     }
 
 
-    // creates a new blank new com.github.murugeshkumark.dsa.common.node
+    // creates a new blank new node
     public BinaryNode createNewNode(int value) {
         BinaryNode node = new BinaryNode();
         node.setValue(value);
@@ -47,7 +47,7 @@ public class BinarySearchTreeByLinkedList {
     }
 
 
-    // Deleting a com.github.murugeshkumark.dsa.common.node from BST
+    // Deleting a node from BST
     public void deleteNodeOfBST(int value) {
         System.out.println("\n\nDeleting " + value + " from BST...");
         deleteNodeOfBST(root, value);
@@ -63,17 +63,17 @@ public class BinarySearchTreeByLinkedList {
             root.setLeft(deleteNodeOfBST(root.getLeft(), value));
         } else if (value > root.getValue()) {
             root.setRight(deleteNodeOfBST(root.getRight(), value));
-        } else { // If currentNode is the com.github.murugeshkumark.dsa.common.node to be deleted
+        } else { // If currentNode is the node to be deleted
 
             if (root.getLeft() != null && root.getRight() != null) { // if nodeToBeDeleted have both children
                 BinaryNode minNodeForRight = minimumElement(root.getRight());// Finding minimum element from right subtree
-                root.setValue(minNodeForRight.getValue()); // Replacing current com.github.murugeshkumark.dsa.common.node with minimum com.github.murugeshkumark.dsa.common.node from right subtree
-                root.setRight(deleteNodeOfBST(root.getRight(), minNodeForRight.getValue()));  // Deleting minimum com.github.murugeshkumark.dsa.common.node from right now
+                root.setValue(minNodeForRight.getValue()); // Replacing current node with minimum node from right subtree
+                root.setRight(deleteNodeOfBST(root.getRight(), minNodeForRight.getValue()));  // Deleting minimum node from right now
             } else if (root.getLeft() != null) {// if nodeToBeDeleted has only left child
                 root = root.getLeft();
             } else if (root.getRight() != null) {// if nodeToBeDeleted has only right child
                 root = root.getRight();
-            } else // if nodeToBeDeleted do not have child (Leaf com.github.murugeshkumark.dsa.common.node)
+            } else // if nodeToBeDeleted do not have child (Leaf node)
                 root = null;
         }
         return root;
@@ -90,13 +90,13 @@ public class BinarySearchTreeByLinkedList {
     }// end of method
 
 
-    // Search a com.github.murugeshkumark.dsa.common.node in BST
+    // Search a node in BST
     void searchForValue(int value) {
         searchForValue(root, value);
     }
 
 
-    // Search a com.github.murugeshkumark.dsa.common.node in BST
+    // Search a node in BST
     BinaryNode searchForValue(BinaryNode node, int value) {
         if (node == null) {
             System.out.println("Value: " + value + " not found in BST.");

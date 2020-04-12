@@ -4,7 +4,7 @@ public class TwoDimensionalArrayMain {
 
     public static void main(String[] args) {
 
-        System.out.println("Creating a blank com.github.murugeshkumark.dsa.array of size 5X5...");
+        System.out.println("Creating a blank array of size 5X5...");
         TwoDimensionalArray sda = new TwoDimensionalArray(5, 5);
         sda.traverseArray();
 

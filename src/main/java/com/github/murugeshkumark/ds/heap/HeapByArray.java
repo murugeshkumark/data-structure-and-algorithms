@@ -7,7 +7,7 @@ public class HeapByArray {
 
     //Constructor
     public HeapByArray(int size) {
-        //We are adding 1 here so that first cell of the com.github.murugeshkumark.dsa.array can be left blank all the time. This is eliminate problem of com.github.murugeshkumark.dsa.array starting from index 0.
+        //We are adding 1 here so that first cell of the array can be left blank all the time. This is eliminate problem of array starting from index 0.
         arr = new int[size + 1];
         this.sizeOfTree = 0;
         System.out.println("Empty Heap has been created !");
@@ -44,7 +44,7 @@ public class HeapByArray {
 
     //Insert a new value in Heap
     public void insertInHeap(int value) {
-        //Doing +1 because sizeOfTree always points to the last occupied cell of the com.github.murugeshkumark.dsa.array
+        //Doing +1 because sizeOfTree always points to the last occupied cell of the array
         System.out.println("Inserting " + value + " in Heap...");
         arr[sizeOfTree + 1] = value;
         sizeOfTree++;
@@ -104,9 +104,9 @@ public class HeapByArray {
         int right = (index * 2) + 1;
         int smallestChild;
 
-        if (sizeOfTree < left) { //If there is no child of this com.github.murugeshkumark.dsa.common.node, then nothing to do. Just return.
+        if (sizeOfTree < left) { //If there is no child of this node, then nothing to do. Just return.
             return;
-        } else if (sizeOfTree == left) { //If there is only left child of this com.github.murugeshkumark.dsa.common.node, then do a comparison and return.
+        } else if (sizeOfTree == left) { //If there is only left child of this node, then do a comparison and return.
             if (arr[index] > arr[left]) {
                 int tmp = arr[index];
                 arr[index] = arr[left];

@@ -60,12 +60,12 @@ public class SingleLinkedList {
         } else {// insert at specified location
             SingleNode tempNode = head;
             int index = 0;
-            while (index < location - 1) {// loop till we reach specified com.github.murugeshkumark.dsa.common.node
+            while (index < location - 1) {// loop till we reach specified node
                 tempNode = tempNode.getNext();
                 index++;
-            }//tempNode currently references to com.github.murugeshkumark.dsa.common.node after which we should insert new com.github.murugeshkumark.dsa.common.node
-            SingleNode nextNode = tempNode.getNext(); //this is the immediate next com.github.murugeshkumark.dsa.common.node after new com.github.murugeshkumark.dsa.common.node
-            tempNode.setNext(node);//update reference of tempNode to reference to new com.github.murugeshkumark.dsa.common.node
+            }//tempNode currently references to node after which we should insert new node
+            SingleNode nextNode = tempNode.getNext(); //this is the immediate next node after new node
+            tempNode.setNext(node);//update reference of tempNode to reference to new node
             node.setNext(nextNode);//update newly added nodes' next.
         }
         setSize(getSize() + 1);
@@ -105,13 +105,13 @@ public class SingleLinkedList {
     }
 
 
-    //Searches a com.github.murugeshkumark.dsa.common.node with given value
+    //Searches a node with given value
     boolean searchNode(int nodeValue) {
         if (existsLinkedList()) {
             SingleNode tempNode = head;
             for (int i = 0; i < getSize(); i++) {
                 if (tempNode.getValue() == nodeValue) {
-                    System.out.print("Found the com.github.murugeshkumark.dsa.common.node at location: " + i + "\n");
+                    System.out.print("Found the node at location: " + i + "\n");
                     return true;
                 }
                 tempNode = tempNode.getNext();
@@ -122,7 +122,7 @@ public class SingleLinkedList {
     }
 
 
-    //Deletes a com.github.murugeshkumark.dsa.common.node having a given value
+    //Deletes a node having a given value
     public void deletionOfNode(int location) {
         if (!existsLinkedList()) {
             System.out.println("The linked list does not exist!!");// Linked List does not exists
@@ -132,10 +132,10 @@ public class SingleLinkedList {
             if (getSize() == 0) { // if there are no more nodes in this list
                 tail = null;
             }
-        } else if (location >= getSize()) { //If location is not in range or equal, then delete last com.github.murugeshkumark.dsa.common.node
+        } else if (location >= getSize()) { //If location is not in range or equal, then delete last node
             SingleNode tempNode = head;
             for (int i = 0; i < size - 1; i++) {
-                tempNode = tempNode.getNext(); //temp com.github.murugeshkumark.dsa.common.node points to 2nd last com.github.murugeshkumark.dsa.common.node
+                tempNode = tempNode.getNext(); //temp node points to 2nd last node
             }
             if (tempNode == head) { //if this is the only element in the list
                 tail = head = null;
@@ -146,12 +146,12 @@ public class SingleLinkedList {
             tail = tempNode;
             setSize(getSize() - 1);
 
-        } else { //if any inside com.github.murugeshkumark.dsa.common.node is to be deleted
+        } else { //if any inside node is to be deleted
             SingleNode tempNode = head;
             for (int i = 0; i < location - 1; i++) {
                 tempNode = tempNode.getNext(); // we need to traverse till we find the location
             }
-            tempNode.setNext(tempNode.getNext().getNext()); // delete the required com.github.murugeshkumark.dsa.common.node
+            tempNode.setNext(tempNode.getNext().getNext()); // delete the required node
             setSize(getSize() - 1);
         }//end of else
 

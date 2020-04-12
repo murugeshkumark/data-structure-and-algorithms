@@ -25,14 +25,14 @@ public class SingleCircularLinkedListMain {
 
         list.printHeadUsingTail();
 
-        System.out.println("Searching the com.github.murugeshkumark.dsa.common.node having value 40: ");
+        System.out.println("Searching the node having value 40: ");
         list.searchNode(40);
 
-        System.out.println("\n\nSearching the com.github.murugeshkumark.dsa.common.node having value 200: ");
+        System.out.println("\n\nSearching the node having value 200: ");
         list.searchNode(200);
 
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 2: ");
+        System.out.println("\n\nDeleting the node having location = 2: ");
         System.out.println("Before deletion...");
         list.traverseLinkedList();
         list.deletionOfNode(2);
@@ -40,7 +40,7 @@ public class SingleCircularLinkedListMain {
         list.traverseLinkedList();
 
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 0: ");
+        System.out.println("\n\nDeleting the node having location = 0: ");
         System.out.println("Before deletion...");
         list.traverseLinkedList();
         list.deletionOfNode(0);
@@ -48,7 +48,7 @@ public class SingleCircularLinkedListMain {
         list.traverseLinkedList();
 
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 15: ");
+        System.out.println("\n\nDeleting the node having location = 15: ");
         System.out.println("Before deletion...");
         list.traverseLinkedList();
         list.deletionOfNode(15);
@@ -56,7 +56,7 @@ public class SingleCircularLinkedListMain {
         list.traverseLinkedList();
 
 
-        System.out.println("\n\nDeleting the com.github.murugeshkumark.dsa.common.node having location = 15: ");
+        System.out.println("\n\nDeleting the node having location = 15: ");
         System.out.println("Before deletion...");
         list.traverseLinkedList();
         list.deletionOfNode(15);

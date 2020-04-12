@@ -5,7 +5,7 @@ public class SingleDimensionArrayMain {
     public static void main(String[] args) {
 
 
-        System.out.println("Creating a blank com.github.murugeshkumark.dsa.array of size 10...");
+        System.out.println("Creating a blank array of size 10...");
         SingleDimensionArray sda = new SingleDimensionArray(10);
 
 
@@ -15,7 +15,7 @@ public class SingleDimensionArrayMain {
         System.out.println();
 
 
-        System.out.println("Inserting few values in the com.github.murugeshkumark.dsa.array...");
+        System.out.println("Inserting few values in the array...");
         sda.insert(0, 0);
         sda.insert(1, 10);
         sda.insert(2, 20);
@@ -55,19 +55,19 @@ public class SingleDimensionArrayMain {
         System.out.println();
 
 
-        System.out.println("Searching 30 in the com.github.murugeshkumark.dsa.array...");
+        System.out.println("Searching 30 in the array...");
         sda.searchInAnArray(30);
         System.out.println();
         System.out.println();
 
 
-        System.out.println("Searching 400 in the com.github.murugeshkumark.dsa.array...");
+        System.out.println("Searching 400 in the array...");
         sda.searchInAnArray(400);
         System.out.println();
         System.out.println();
 
 
-        System.out.println("Deleting value from Cell#3 of com.github.murugeshkumark.dsa.array...");
+        System.out.println("Deleting value from Cell#3 of array...");
         System.out.println("Before Deleting: ");
         sda.traverseArray();
         sda.deleteValueFromArray(3);
@@ -79,7 +79,7 @@ public class SingleDimensionArrayMain {
         System.out.println();
 
 
-        System.out.println("Deleting value from Cell#15 of com.github.murugeshkumark.dsa.array...");
+        System.out.println("Deleting value from Cell#15 of array...");
         System.out.println("Before Deleting: ");
         sda.traverseArray();
         sda.deleteValueFromArray(15);

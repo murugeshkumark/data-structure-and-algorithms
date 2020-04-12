@@ -18,7 +18,7 @@ public class BFSByLinkedList {
 
     //BFS Algorithm
     void bfs() {
-        //if a com.github.murugeshkumark.dsa.common.node is unvisited then run com.github.murugeshkumark.dsa.tree.bfs on it
+        //if a node is unvisited then run bfs on it
         for (GraphNode node : nodeList) {
             if (!node.isVisited())
                 bfsVisit(node);
@@ -29,13 +29,13 @@ public class BFSByLinkedList {
     //BFS internal method
     void bfsVisit(GraphNode node) {
         LinkedList<GraphNode> queue = new LinkedList<>();
-        queue.add(node); //add source com.github.murugeshkumark.dsa.common.node to com.github.murugeshkumark.dsa.queue
+        queue.add(node); //add source node to queue
         while (!queue.isEmpty()) {
             GraphNode presentNode = queue.remove(0);
             presentNode.setVisited(true);
             System.out.print(presentNode.getName() + " ");
-            for (GraphNode neighbor : presentNode.getNeighbors()) { //for each neighbor of present com.github.murugeshkumark.dsa.common.node
-                if (!neighbor.isVisited()) { //if neighbor is not visited then add it to com.github.murugeshkumark.dsa.queue
+            for (GraphNode neighbor : presentNode.getNeighbors()) { //for each neighbor of present node
+                if (!neighbor.isVisited()) { //if neighbor is not visited then add it to queue
                     queue.add(neighbor);
                     neighbor.setVisited(true);
                 }

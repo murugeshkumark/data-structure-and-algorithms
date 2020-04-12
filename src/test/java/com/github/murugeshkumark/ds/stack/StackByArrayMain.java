@@ -4,7 +4,7 @@ public class StackByArrayMain {
     public static void main(String[] args) {
 
 
-        System.out.println("Creating a com.github.murugeshkumark.dsa.stack of size 5...");
+        System.out.println("Creating a stack of size 5...");
         StackByArray stack = new StackByArray(5);
 
 
@@ -14,7 +14,7 @@ public class StackByArrayMain {
         }
 
 
-        System.out.println("Peeking value from com.github.murugeshkumark.dsa.stack");
+        System.out.println("Peeking value from stack");
         stack.peekOperation();
 
 

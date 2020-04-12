@@ -43,11 +43,11 @@ public class DoubleLinkedList {
             node.setNext(null);
             tail.setNext(node);
             node.setPrev(tail);
-            tail = node; // to keep track of last com.github.murugeshkumark.dsa.common.node
+            tail = node; // to keep track of last common.node
         } else {// insert at specified location
             DoubleNode tempNode = head;
             int index = 0;
-            while (index < location - 1) {// loop till we reach specified com.github.murugeshkumark.dsa.common.node
+            while (index < location - 1) {// loop till we reach specified common.node
                 tempNode = tempNode.getNext();
                 index++;
             }
@@ -118,13 +118,13 @@ public class DoubleLinkedList {
     }
 
 
-    //Search for a com.github.murugeshkumark.dsa.common.node in linked list
+    //Search for a common.node in linked list
     boolean searchNode(int nodeValue) {
         if (existsLinkedList()) {
             DoubleNode tempNode = head;
             for (int i = 0; i < size; i++) {
                 if (tempNode.getValue() == nodeValue) {
-                    System.out.print("Found the com.github.murugeshkumark.dsa.common.node at locaiton: " + i);
+                    System.out.print("Found the node at locaiton: " + i);
                     return true;
                 }
                 tempNode = tempNode.getNext();
@@ -135,12 +135,12 @@ public class DoubleLinkedList {
     }
 
 
-    // Deletes a com.github.murugeshkumark.dsa.common.node having a given value
+    // Deletes a node having a given value
     public void deletionOfNode(int location) {
         if (!existsLinkedList()) {
             System.out.println("The linked list does not exist!!");// Linked List does not exists
         } else if (location == 0) { // we want to delete first element
-            if (getSize() == 1) { // if this is the only com.github.murugeshkumark.dsa.common.node in this list
+            if (getSize() == 1) { // if this is the only node in this list
                 head = tail = null;
                 setSize(getSize() - 1);
             } else {
@@ -148,8 +148,8 @@ public class DoubleLinkedList {
                 head.setPrev(null);
                 setSize(getSize() - 1);
             }
-        } else if (location >= getSize()) { // If location is not in range or equal, then delete last com.github.murugeshkumark.dsa.common.node
-            DoubleNode tempNode = tail.getPrev(); // temp com.github.murugeshkumark.dsa.common.node points to 2nd last com.github.murugeshkumark.dsa.common.node
+        } else if (location >= getSize()) { // If location is not in range or equal, then delete last node
+            DoubleNode tempNode = tail.getPrev(); // temp node points to 2nd last node
             if (tempNode == head) { // if this is the only element in the list
                 tail = head = null;
                 setSize(getSize() - 1);
@@ -159,12 +159,12 @@ public class DoubleLinkedList {
             tail = tempNode;
             setSize(getSize() - 1);
 
-        } else { // if any inside com.github.murugeshkumark.dsa.common.node is to be deleted
+        } else { // if any inside node is to be deleted
             DoubleNode tempNode = head;
             for (int i = 0; i < location - 1; i++) {
                 tempNode = tempNode.getNext(); // we need to traverse till we find the location
             }
-            tempNode.setNext(tempNode.getNext().getNext()); // delete the required com.github.murugeshkumark.dsa.common.node
+            tempNode.setNext(tempNode.getNext().getNext()); // delete the required node
             tempNode.getNext().setPrev(tempNode);
             setSize(getSize() - 1);
         } // end of else

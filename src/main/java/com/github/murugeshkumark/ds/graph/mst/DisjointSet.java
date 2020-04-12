@@ -10,11 +10,11 @@ public class DisjointSet {
 
 
     public static void driver(ArrayList<WeightedNode> nodeList) {
-        makeSet(nodeList); //Create Disjoint Sets for each com.github.murugeshkumark.dsa.common.node in this list.
+        makeSet(nodeList); //Create Disjoint Sets for each node in this list.
         for (int i = 0; i < nodeList.size() - 1; i++) {
             WeightedNode firstNode = nodeList.get(i);
             WeightedNode secondNode = nodeList.get(i + 1);
-            System.out.println("Checking if com.github.murugeshkumark.dsa.common.node " + firstNode.getName() + " and " + secondNode.getName() + " belongs to different set, if yes, will Union them...");
+            System.out.println("Checking if node " + firstNode.getName() + " and " + secondNode.getName() + " belongs to different set, if yes, will Union them...");
             System.out.println("\nFirst Set name is: " + firstNode.getName());
             firstNode.getSet().printAllNodesOfThisSet();
             System.out.println("\nSecond Set name is: " + secondNode.getName());
@@ -31,7 +31,7 @@ public class DisjointSet {
 
 
     public static void makeSet(ArrayList<WeightedNode> nodeList) {
-        //for each com.github.murugeshkumark.dsa.common.node in list, create a disjoint set
+        //for each node in list, create a disjoint set
         for (WeightedNode node : nodeList) {
             DisjointSet set = new DisjointSet();
             set.getNodes().add(node);
@@ -57,18 +57,18 @@ public class DisjointSet {
             //get set object of two nodes
             DisjointSet set1 = node1.getSet();
             DisjointSet set2 = node2.getSet();
-            // if first set is bigger then update each com.github.murugeshkumark.dsa.common.node of second set to merge to set1
+            // if first set is bigger then update each node of second set to merge to set1
             if (set1.getNodes().size() > set2.getNodes().size()) {
                 ArrayList<WeightedNode> nodeSet2 = set2.getNodes();
-                for (WeightedNode node : nodeSet2) { //update each com.github.murugeshkumark.dsa.common.node of second set to merge to set1
+                for (WeightedNode node : nodeSet2) { //update each node of second set to merge to set1
                     node.setSet(set1);
                     set1.getNodes().add(node);
                 }
                 return set1;
             } else {
-                // if second set is bigger/equal then update each com.github.murugeshkumark.dsa.common.node of first set to merge to set2
+                // if second set is bigger/equal then update each node of first set to merge to set2
                 ArrayList<WeightedNode> nodeSet1 = set1.getNodes();
-                for (WeightedNode node : nodeSet1) {//update each com.github.murugeshkumark.dsa.common.node of first set to merge to set2
+                for (WeightedNode node : nodeSet1) {//update each node of first set to merge to set2
                     node.setSet(set2);
                     set2.getNodes().add(node);
                 }

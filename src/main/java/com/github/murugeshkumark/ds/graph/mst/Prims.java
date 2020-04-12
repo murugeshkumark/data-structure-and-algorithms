@@ -15,7 +15,7 @@ public class Prims {
     }//end of method
 
 
-    // Prim's algorithm from source com.github.murugeshkumark.dsa.common.node
+    // Prim's algorithm from source node
     void prims(WeightedNode node) {
         for (WeightedNode weightedNode : nodeList) {
             weightedNode.setDistance(Integer.MAX_VALUE);
@@ -43,7 +43,7 @@ public class Prims {
                     if (neighbor.getDistance() > presentNode.getWeightMap().get(neighbor)) {
                         neighbor.setDistance(presentNode.getWeightMap().get(neighbor));
                         neighbor.setParent(presentNode);
-                        queue.remove(neighbor); // Refresh the priority com.github.murugeshkumark.dsa.queue
+                        queue.remove(neighbor); // Refresh the priority queue
                         queue.add(neighbor);
                     }//end of if-else
                 }//end of if-else
@@ -51,7 +51,7 @@ public class Prims {
         }//end of while loop
 
         int cost = 0;
-        // print table of com.github.murugeshkumark.dsa.common.node with minimum distance and shortest path from source
+        // print table of node with minimum distance and shortest path from source
         for (WeightedNode nodeToCheck : nodeList) {
             System.out.println("Node " + nodeToCheck + ", key: " + nodeToCheck.getDistance() + ", Parent: " + nodeToCheck.getParent());
             cost = cost + nodeToCheck.getDistance();

@@ -13,7 +13,7 @@ public class SingleDimensionArray {
     }
 
 
-    // Print the com.github.murugeshkumark.dsa.array
+    // Print the array
     public void traverseArray() {
         try {
             for (int value : arr) {
@@ -35,19 +35,19 @@ public class SingleDimensionArray {
                 System.out.println("This cell is already occupied by another value.");
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Invalid index to access com.github.murugeshkumark.dsa.array !");
+            System.out.println("Invalid index to access array !");
             // e.printStackTrace();
         }
     }
 
 
-    // Access a particular element of an com.github.murugeshkumark.dsa.array
+    // Access a particular element of an array
     public void accessingCell(int cellNumber) {
         try {
             System.out.println(arr[cellNumber]);
 
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Invalid index to access com.github.murugeshkumark.dsa.array !");
+            System.out.println("Invalid index to access array !");
 
         }
     }
@@ -72,7 +72,7 @@ public class SingleDimensionArray {
             arr[deleteValueFromThisCell] = Integer.MIN_VALUE;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println();
-            System.out.println("Cant delete the value as cell# provided is not in the range of com.github.murugeshkumark.dsa.array !");
+            System.out.println("Cant delete the value as cell# provided is not in the range of array !");
             // e.printStackTrace();
         }
     }

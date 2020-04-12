@@ -10,7 +10,7 @@ public class QuickSortMain {
 
         QuickSort.quickSort(array, 0, array.length - 1);
 
-        System.out.println("\n\nAfter com.github.murugeshkumark.dsa.algorithms.sorting: ");
+        System.out.println("\n\nAfter sorting: ");
         QuickSort.printArray(array);
     }//end of method
 

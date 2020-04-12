@@ -17,7 +17,7 @@ public class QueueByLinkedList {
         if (list.getHead() == null) {
             list.createSingleLinkedList(value);
         } else {
-            // push a value on last of com.github.murugeshkumark.dsa.queue, update list tail too
+            // push a value on last of queue, update list tail too
             list.insertInLinkedList(value, list.getSize());
         }
     }//end of method
@@ -39,7 +39,7 @@ public class QueueByLinkedList {
         if (!isQueueEmpty())
             return list.getHead().getValue();
         else {
-            System.out.println("The com.github.murugeshkumark.dsa.queue is empty!!");
+            System.out.println("The queue is empty!!");
             return -1;
         }
     }//end of method

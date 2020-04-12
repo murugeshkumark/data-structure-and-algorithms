@@ -14,10 +14,10 @@ public class TwoDimensionalArray {
     }
 
 
-    // Traverse the com.github.murugeshkumark.dsa.array
+    // Traverse the array
     public void traverseArray() {
         try {
-            System.out.println("Printing the com.github.murugeshkumark.dsa.array now...");
+            System.out.println("Printing the array now...");
             for (int[] ints : arr) {
                 for (int col = 0; col < arr[0].length; col++) {
                     System.out.print(ints[col] + "   ");
@@ -37,24 +37,24 @@ public class TwoDimensionalArray {
         try {
             if (arr[row][col] == Integer.MIN_VALUE) {
                 arr[row][col] = value;
-                System.out.println("Successfully inserted " + value + " in the com.github.murugeshkumark.dsa.array.");
+                System.out.println("Successfully inserted " + value + " in the array.");
             } else {
                 System.out.println("This cell is already occupied by another value.");
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Invalid index to access com.github.murugeshkumark.dsa.array !");
+            System.out.println("Invalid index to access array !");
             // e.printStackTrace();
         }
     }
 
 
-    // Accessing single value from given com.github.murugeshkumark.dsa.array
+    // Accessing single value from given array
     public void accessSingleCell(int row, int col) {
         System.out.println("\nAccessing Row#" + row + ", Col#" + col + "...");
         try {
             System.out.println("Cell value is: " + arr[row][col]);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Invalid index to access com.github.murugeshkumark.dsa.array !");
+            System.out.println("Invalid index to access array !");
             // e.printStackTrace();
         }
         System.out.println();
@@ -63,7 +63,7 @@ public class TwoDimensionalArray {
 
     // Searching a single value from the Array
     public void searchingSingleValue(int value) {
-        System.out.println("\nSearching value " + value + " in the com.github.murugeshkumark.dsa.array");
+        System.out.println("\nSearching value " + value + " in the array");
         for (int row = 0; row < arr.length; row++) {
             for (int col = 0; col < arr[0].length; col++) {
                 if (arr[row][col] == value) {
@@ -86,7 +86,7 @@ public class TwoDimensionalArray {
             arr[deleteValueFromThisRow][deleteValueFromThisCol] = Integer.MIN_VALUE;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println();
-            System.out.println("Cant delete the value as cell# provided is not in the range of com.github.murugeshkumark.dsa.array !");
+            System.out.println("Cant delete the value as cell# provided is not in the range of array !");
             // e.printStackTrace();
         }
     }

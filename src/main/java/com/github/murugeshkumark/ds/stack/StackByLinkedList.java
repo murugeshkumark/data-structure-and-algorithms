@@ -44,7 +44,7 @@ public class StackByLinkedList {
         if (!isEmpty())
             return list.getHead().getValue();
         else {
-            System.out.println("The com.github.murugeshkumark.dsa.stack is empty!!");
+            System.out.println("The stack is empty!!");
             return -1;
         }
     }// end of method

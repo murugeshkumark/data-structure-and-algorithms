@@ -13,7 +13,7 @@ public class InsertionSortMain {
         long end = System.nanoTime();
         System.out.println("\n\nTime to execute this algo: " + (end - start));
 
-        System.out.println("\nAfter com.github.murugeshkumark.dsa.algorithms.sorting: ");
+        System.out.println("\nAfter sorting: ");
         InsertionSort.printArray(array);
     }//end of method
 

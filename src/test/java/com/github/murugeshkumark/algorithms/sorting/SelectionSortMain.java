@@ -10,7 +10,7 @@ public class SelectionSortMain {
 
         SelectionSort.selectionSort(array);
 
-        System.out.println("\n\nAfter com.github.murugeshkumark.dsa.algorithms.sorting: ");
+        System.out.println("\n\nAfter sorting: ");
         SelectionSort.printArray(array);
     }//end of method
 

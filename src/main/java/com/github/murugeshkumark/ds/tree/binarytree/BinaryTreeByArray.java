@@ -13,13 +13,13 @@ public class BinaryTreeByArray {
     }//end of method
 
 
-    //Check if com.github.murugeshkumark.dsa.array is full
+    //Check if array is full
     boolean isTreeFull() {
         return arr.length - 1 == lastUsedIndex;
     }
 
 
-    // New com.github.murugeshkumark.dsa.common.node should be inserted at the first empty place in the com.github.murugeshkumark.dsa.array
+    // New node should be inserted at the first empty place in the array
     void insert(int value) {
         if (!isTreeFull()) {
             arr[lastUsedIndex + 1] = value;
@@ -72,7 +72,7 @@ public class BinaryTreeByArray {
     }//end of method
 
 
-    // Do a linear search on the com.github.murugeshkumark.dsa.array
+    // Do a linear search on the array
     public int search(int value) {
         for (int i = 0; i <= lastUsedIndex; i++) {
             if (arr[i] == value) {

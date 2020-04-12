@@ -14,7 +14,7 @@ public class BucketSortMain {
         }
 
 
-        //Passing this com.github.murugeshkumark.dsa.array to BucketSort method
+        //Passing this array to BucketSort method
         BucketSort bs = new BucketSort(arr);
         System.out.println("Array before Sorting: ");
         bs.printArray();

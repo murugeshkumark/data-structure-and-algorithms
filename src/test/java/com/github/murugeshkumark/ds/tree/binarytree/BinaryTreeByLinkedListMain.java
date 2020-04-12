@@ -35,27 +35,27 @@ public class BinaryTreeByLinkedListMain {
         System.out.println();
 
 
-        System.out.println("\nSearching com.github.murugeshkumark.dsa.common.node 50 in the tree...");
+        System.out.println("\nSearching node 50 in the tree...");
         tree.search(50);
 
 
-        System.out.println("\nSearching com.github.murugeshkumark.dsa.common.node 500 in the tree...");
+        System.out.println("\nSearching node 500 in the tree...");
         tree.search(500);
 
 
-        System.out.println("\nDeleting com.github.murugeshkumark.dsa.common.node having value-5 in the tree...");
+        System.out.println("\nDeleting node having value-5 in the tree...");
         tree.deleteNodeOfBinaryTree(5);
 
 
-        System.out.println("\nDeleting com.github.murugeshkumark.dsa.common.node having value-50 in the tree...");
+        System.out.println("\nDeleting node having value-50 in the tree...");
         tree.deleteNodeOfBinaryTree(50);
         tree.levelOrder();
 
-        System.out.println("\n\nDeleting com.github.murugeshkumark.dsa.common.node having value-10 in the tree...");
+        System.out.println("\n\nDeleting node having value-10 in the tree...");
         tree.deleteNodeOfBinaryTree(10);
         tree.levelOrder();
 
-        System.out.println("\n\nDeleting com.github.murugeshkumark.dsa.common.node having value-80 in the tree...");
+        System.out.println("\n\nDeleting node having value-80 in the tree...");
         tree.deleteNodeOfBinaryTree(80);
         tree.levelOrder();
 

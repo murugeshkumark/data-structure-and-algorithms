@@ -5,7 +5,7 @@ public class BinaryTreeByArrayMain {
     public static void main(String[] args) {
 
 
-        //Create a blank com.github.murugeshkumark.dsa.array to store Binary Tree
+        //Create a blank array to store Binary Tree
         System.out.println("Creating a blank Array to store Binary Tree...");
         BinaryTreeByArray tree = new BinaryTreeByArray(10);
 
@@ -47,12 +47,12 @@ public class BinaryTreeByArrayMain {
 
 
         //Delete value from Tree
-        System.out.println("\nDeleting com.github.murugeshkumark.dsa.common.node 500 from the tree...");
+        System.out.println("\nDeleting node 500 from the tree...");
         tree.delete(500);
 
 
         //Delete value from Tree
-        System.out.println("Deleting com.github.murugeshkumark.dsa.common.node 40 from the tree...");
+        System.out.println("Deleting node 40 from the tree...");
         tree.delete(40);
 
 

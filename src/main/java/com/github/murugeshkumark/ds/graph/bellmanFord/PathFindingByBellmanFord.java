@@ -18,7 +18,7 @@ public class PathFindingByBellmanFord {
     }//end of method
 
 
-    // BellmanFord from a source com.github.murugeshkumark.dsa.common.node
+    // BellmanFord from a source node
     void bellmanFord(WeightedNode sourceNode) {
         sourceNode.setDistance(0); // set source distance to zero
 
@@ -53,14 +53,14 @@ public class PathFindingByBellmanFord {
         System.out.println("Negative cycle not found !");
 
 
-        //Print table of com.github.murugeshkumark.dsa.common.node with minimum distance and shortest path from source
+        //Print table of node with minimum distance and shortest path from source
         System.out.println("\n\nPrinting Paths now: ");
         for (WeightedNode nodeToCheck : nodeList) {
             if (nodeToCheck.getDistance() != Integer.MAX_VALUE / 10) {
                 System.out.print("Node " + nodeToCheck + ", distance: " + nodeToCheck.getDistance() + ", Path: ");
                 pathPrint(nodeToCheck);
             } else {
-                System.out.print("No path for com.github.murugeshkumark.dsa.common.node " + nodeToCheck);
+                System.out.print("No path for node " + nodeToCheck);
             }
             System.out.println();
         }//end of loop

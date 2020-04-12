@@ -1,6 +1,6 @@
 package com.github.murugeshkumark.ds.graph.mst;
 
-import com.github.murugeshkumark.ds.graph.graphUtil.UndirectedEdge;
+import com.github.murugeshkumark.common.node.UndirectedEdge;
 import com.github.murugeshkumark.common.node.WeightedNode;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class Kruskal {
 
     // Kruskal algo
     void kruskal() {
-        // make disjoint sets for each com.github.murugeshkumark.dsa.common.node
+        // make disjoint sets for each node
         DisjointSet.makeSet(nodeList);
 
         // sort the edges in ascending order

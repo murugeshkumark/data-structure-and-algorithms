@@ -14,19 +14,19 @@ public class StackByArray {
 
 
     public void push(int value) {
-        //if com.github.murugeshkumark.dsa.array is full, show com.github.murugeshkumark.dsa.stack overflow error
+        //if array is full, show stack overflow error
         if (isFullStack()) {
             System.out.println("Stack overflow error!!");
         } else {
             arr[topOfStack + 1] = value;
             topOfStack++;
-            System.out.println("Successfully inserted " + value + " in the com.github.murugeshkumark.dsa.stack");
+            System.out.println("Successfully inserted " + value + " in the stack");
         }
     }//end of method
 
 
     public void pop() {
-        //if com.github.murugeshkumark.dsa.array is empty, show com.github.murugeshkumark.dsa.stack underflow error
+        //if array is empty, show stack underflow error
         if (isEmptyStack()) {
             System.out.println("Stack underflow error!!");
         } else {
@@ -37,7 +37,7 @@ public class StackByArray {
 
 
     public boolean isEmptyStack() {
-        //if top pointer is zero, the com.github.murugeshkumark.dsa.stack is empty
+        //if top pointer is zero, the stack is empty
         return topOfStack == -1;
     }//end of method
 
@@ -56,7 +56,7 @@ public class StackByArray {
         if (!isEmptyStack())
             System.out.println("Top of Stack: " + arr[topOfStack]);
         else {
-            System.out.println("The com.github.murugeshkumark.dsa.stack is empty!!");
+            System.out.println("The stack is empty!!");
         }
         System.out.println();
         System.out.println();

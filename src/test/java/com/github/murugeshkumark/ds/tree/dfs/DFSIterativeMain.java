@@ -32,7 +32,7 @@ public class DFSIterativeMain {
         graph.addUndirectedEdge(8, 9);
         graph.addUndirectedEdge(9, 10);
 
-        //com.github.murugeshkumark.dsa.tree.dfs from v1
+        //dfs from v1
         System.out.println("Printing DFS from source: V1");
         graph.dfs();
     }

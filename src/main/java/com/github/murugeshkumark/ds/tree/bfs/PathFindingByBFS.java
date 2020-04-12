@@ -23,17 +23,17 @@ public class PathFindingByBFS {
     }//end of method
 
 
-    //BFS Traversal by a source com.github.murugeshkumark.dsa.common.node
+    //BFS Traversal by a source node
     void BFSForSSSP(GraphNode node) {
         LinkedList<GraphNode> queue = new LinkedList<>();
-        queue.add(node);  //add source com.github.murugeshkumark.dsa.common.node to com.github.murugeshkumark.dsa.queue
+        queue.add(node);  //add source node to queue
         while (!queue.isEmpty()) {
             GraphNode presentNode = queue.remove(0);
             presentNode.setVisited(true);
-            System.out.print("Printing path for com.github.murugeshkumark.dsa.common.node " + presentNode.getName() + ": ");
+            System.out.print("Printing path for node " + presentNode.getName() + ": ");
             pathPrint(presentNode);
             System.out.println();
-            for (GraphNode neighbor : presentNode.getNeighbors()) {  //for each neighbor of present com.github.murugeshkumark.dsa.common.node
+            for (GraphNode neighbor : presentNode.getNeighbors()) {  //for each neighbor of present node
                 if (!neighbor.isVisited()) {
                     queue.add(neighbor);
                     neighbor.setVisited(true);
