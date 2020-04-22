@@ -1,4 +1,4 @@
-package com.github.murugeshkumark.algorithms.sorting;
+package com.github.murugeshkumark.ds.graph.top;
 
 import com.github.murugeshkumark.common.node.GraphNode;
 
