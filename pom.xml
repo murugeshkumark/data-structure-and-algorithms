@@ -5,6 +5,14 @@
     <groupId>com.github.murugeshkumark</groupId>
     <artifactId>data-structure-and-algorithms</artifactId>
     <version>1.0.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <packaging>jar</packaging>
     <name>data-structure-and-algorithms</name>
 
